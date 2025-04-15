@@ -1,56 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="/CSS/Dashboard/Dashboard.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker-Dashboard</title>
+    <link rel="stylesheet" href="/CSS/Dashboard/Dashboard.css">
 <body>
-  <div class="dashboard-container">
-
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <h2>Finance Tracker</h2>
-      <nav>
-        <ul>
-          <li>Dashboard</li>
-          <li>Transactions</li>
-          <li>Categories</li>
-          <li>Income</li>
-          <li>Budget Goals</li>
-          <li>Bills</li>
-          <li>Savings</li>
-          <li>Debt</li>
-        </ul>
-      </nav>
-    </aside>
-
-    <!-- Main Content -->
-    <main class="main-content">
-      <header class="dashboard-header">
-        <h3>Dashboard</h3>
-        <h4>Hello, Username! Here's your financial overview </h4>
-      </header>
-
-      <section class="summary-cards">
-        <div class="card">Net Worth</div>
-        <div class="card">Income VS Expense</div>
-        <div class="card">Budget Goals</div>
-      </section>
-
-      <section class="mid-cards">
-        <div class="card">Upcoming Bills</div>
-        <div class="card">Spending Breakdown</div>
-        <div class="card">Savings Goals</div>
-      </section>
-
-      <section class="bottom-cards">
-        <div class="card">Recent Transactions</div>
-        <div class="card">Alerts & Notifications</div>
-      </section>
-    </main>
-
-  </div>
+    <header class="Header">
+        <table class="Uname">
+            <tr>
+                <td>User Name</td>
+            </tr>
+            <tr>
+                <td>Designation</td>
+            </tr>
+        </table>
+        <img class="Uimg" src="/CSS/Dashboard/images/tuhin.jpg" alt="User Image">
+        <img class="Unotify" src="/CSS/Dashboard/images/notifications.png" alt="Notification Sign">
+    </header>
+    <nav class="SideNav">
+        <img class="LogoImg" src="/CSS/Dashboard/images/Main_Logo.png"alt="Logo">
+        <h1>MAIN MENU</h1>
+        <table class="Menu">
+            <tr>
+                <td><img class="menuIcon" src="/CSS/Dashboard/images/overview.png"></td>
+                <td><a class="subMenu" href="#">OverView</a></td>
+            </tr>
+            <tr>
+                <td><img class="menuIcon"src="/CSS/Dashboard/images/card.png" alt=""></td>
+                <td><a class="subMenu" href="#">Card</a></td>
+            </tr>
+            <tr>
+                <td><img class="menuIcon"src="/CSS/Dashboard/images/Budget.png" alt=""></td>
+                <td><a class="subMenu" href="#">Budget</a></td>
+            </tr>
+            <tr>
+                <td><img class="menuIcon"src="/CSS/Dashboard/images/Payment.png" alt=""></td>
+                <td><a class="subMenu" href="#">Payment</a></td>
+            </tr>
+            <tr>
+                <td><img class="menuIcon"src="/CSS/Dashboard/images/statistics.png" alt=""></td>
+                <td><a class="subMenu" href="#">Statistics</a></td>
+            </tr>
+            <tr>
+                <td><img class="menuIcon"src="/CSS/Dashboard/images/report.png" alt=""></td>
+                <td><a class="subMenu" href="#">Report</a></td>
+            </tr>
+            <tr>
+                <td><img class="menuIcon"src="/CSS/Dashboard/images/account.png" alt=""></td>
+                <td><a class="subMenu" href="#">Account</a></td>
+            </tr>
+        </table>
+        <table class="logoutTable">
+            <tr>
+                <td><img class="logout"src="/CSS/Dashboard/images/logout.png"></td>
+                <td><a href="#" class="subMenu">Log Out</a></td>
+            </tr>
+        </table>
+    </nav>
 </body>
 </html>
