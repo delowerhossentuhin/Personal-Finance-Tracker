@@ -1,100 +1,239 @@
-*{
-    
+* {
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
 }
-body{
+
+body {
   margin: 0;
   padding: 0;
-}
-body{
-  background-color: rgba(19,19,19,255);
-}
-.Header{
-  background-color: rgba(19,19,19,255);
-  position: absolute;
-  top: 0px;
-  right: 20px;
-  left: 180px;
-  width: 1150px;
-  height: 120px;
-  /*border: 1px solid red;*/
-}
-.Header .Uname{
-  color: rgb(221,221,221);
-  margin:15px 0px 20px 1035px;
-  color: aliceblue;
-}
-.Header .Uname td {
-  padding: 0;
-  margin: 0;
-  line-height: 1; /* makes rows tighter vertically */
-}
-.Header .Uname tr:nth-child(1){
-  font-size: 19px;
-  font-weight: bold;
+  background-color: rgba(19, 19, 19, 255);
+  overflow-x: auto;
+  overflow-y: auto;
+  height: 100vh;
 }
 
-.Header .Uimg{
+.Header {
+  background-color: rgba(19, 19, 19, 255);
+  position: fixed;
+  top: 0;
+  left: 180px;
+  height: 80px;
+  display: flex;
+}
+
+.user-info {
+  list-style-type: none;
   position: absolute;
-  left: 980px;
-  right: 100px;
+  color: aliceblue;
+  text-align: left;
+  left: 780px;
+  gap: 0px;
+  width: 150px;
+  padding: 0;
+  margin: 0;
+}
+.username {
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 1.2;
+  padding: 0;
+  margin: 0;
+}
+
+.designation {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.Uimg {
+  position: relative;
   top:20px;
+  left: 690px;
   height: 40px;
   width: 40px;
   object-fit: cover;
   border-radius: 50%;
 }
-.Header .Unotify{
-  position: absolute;
-  left: 930px;
-  right: 100px;
-  top:22px;
-  width: 30px;
-  height: auto;
-  object-fit: cover;
-}
 
-.SideNav{
-  padding: 0px;
-  width: 180px;
-  height: 700px;
-  background-color: rgba(15,137,155,255);
-}
-.SideNav .LogoImg{
-  margin-top: 15px;
-  margin-left: 15px;
-  width: 120px;
-  height: 50px;
-  background-color: rgba(15,137,155,255);
-}
-.SideNav .menuIcon{
+.Unotify {
+  position: relative;
+  top:25px;
+  left: 600px;
   width: 25px;
   height: 25px;
+  object-fit: cover;
+  margin-right: 15px;
 }
-.SideNav .subMenu{
+
+.search-bar {
+  position: absolute;
+  left: 20px;
+  top: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  color: white;
+  background-color: transparent;
+  width: 550px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid white;
+}
+
+.search-bar input::placeholder {
+  color: white;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar .fa-search {
+  color: white;
+  margin-left: 10px;
+}
+
+.SideNav {
+  position: fixed;
+  padding: 0;
+  margin-top: 0px;
+  width: 180px;
+  height: 100vh;
+  background-color: rgba(15, 137, 155, 255);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.SideNav .LogoImg {
+  margin: 10px auto auto 15px;
+  display: block;
+  width: 120px;
+  height: 50px;
+}
+
+.SideNav h1 {
+  font-size: 20px;
+  color: aliceblue;
+  padding-left: 12px;
+}
+
+.Menu {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 10px 0;
+  gap: 0px;
+}
+
+.menuRow {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 5px 15px;
+  margin-left: 14px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.menuRow:hover {
+  background-color: rgba(19, 19, 19, 255);
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.menuIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.subMenu {
   text-decoration: none;
   color: aliceblue;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
-  position: relative;
-top: -5px; /* Moves the text up by 10px */
 }
-.SideNav .Menu{
- border-spacing: 20px 15px;
- margin: 0;
+
+.logout {
+  position: absolute;
+  top:430px;
+  height: 15px;
+  width: 150px;
+  padding-left: 29px;
 }
-.SideNav h1{
-  font-size: 20px;
-  margin-bottom: 0px;
-  padding-left: 12px;
+.panel1{
+  position:absolute;
+  top:80px;
+  left: 180px;
+  /* border: 2px solid red; */
+  width: 900px;
+  height: 700px;
+  background-color: rgba(19, 19, 19, 255);
+}
+.balance{
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 20px;
+  width: 270px;
+  height: 150px;
+  background-color: rgba(27,26,31,255);
+  border-radius: 20px;
+}
+.savings{
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 305px;
+  width: 270px;
+  height: 150px;
+  background-color: rgba(27,26,31,255);
+  border-radius: 20px;
+}
+.Income{
+  position: absolute;
+  margin-top: 165px;
+  margin-left: 20px;
+  width: 270px;
+  height: 150px;
+  background-color: rgba(27,26,31,255);
+  border-radius: 20px;
+}
+.Expense{
+  position: absolute;
+  margin-top: 165px;
+  margin-left: 305px;
+  width: 270px;
+  height: 150px;
+  background-color: rgba(27,26,31,255);
+  border-radius: 20px;
+}
+.panel1 h1{
+  font-size: 14px;
+  margin-top: 15px;
+  margin-left: 15px;
   color: aliceblue;
 }
-.SideNav .logout{
-  width: 30px;
-  height: 30px;
+.panel1 h2{
+  font-size: 18px;
+  color: aliceblue;
+  margin-left: 10px;
+  padding-top: 60px;
 }
-.SideNav .logoutTable{
-  margin-left: 0px;
-  margin-top: 75px;
-  border-spacing: 20px 15px;
+.FStatistics{
+  position: absolute;
+  margin-top: 330px;
+  margin-left: 20px;
+  width: 550px;
+  height: 200px;
+  background-color: rgba(27,26,31,255);
+  border-radius: 20px;
+}
+.AllTransactions{
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 590px;
+  width: 290px;
+  height: 525px;
+  background-color: rgba(27,26,31,255);
+  border-radius: 20px;
 }
