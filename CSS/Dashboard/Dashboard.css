@@ -165,9 +165,9 @@ body {
   position:absolute;
   top:80px;
   left: 180px;
-  /* border: 2px solid red; */
+  display: block;
   width: 900px;
-  height: 700px;
+  height: 600px;
   background-color: rgba(19, 19, 19, 255);
 }
 .balance{
@@ -253,5 +253,153 @@ body {
 #panel1_pieChart_expense{
   margin-left: 70px;
   margin-top: -145px;
+}
+#statisctics{
+  margin-top: -50px;
+  margin-left: 20px;
+}
+.panel2{
+  position:absolute;
+  display: none;
+  top:80px;
+  left: 180px;
+  width: 900px;
+  height: 650px;
+  background-color: rgba(19, 19, 19, 255);
 
 }
+.panel2 h1{
+  margin-left: 30px;
+  font-size: 20px;
+  color: aliceblue;
+}
+.carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 60px;
+  margin-top: 10px;
+  position: relative;
+  width: 100%;
+  height: 190px;
+  max-width: 800px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: rgba(27,26,31,255);
+}
+.carousel-wrapper h1{
+  margin-left: -670px;
+  height: 15px;
+}
+.card-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  width: 100%; /* Add this */
+  max-width: 100%; /* Optional, but safe */
+  padding-left: 50px;
+}
+
+  /* Hide scrollbar (Chrome, Safari, Opera) */
+  .card-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar (Firefox) */
+  
+  .card {
+    flex: 0 0 auto;
+    width: 160px;
+    height: 120px;
+    margin-left: 20px;
+    background-color: #f2f2f2;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    
+  }
+  
+  .add-card {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-20%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px 10px;
+    z-index: 1;
+    color: aliceblue;
+    border-radius: 10px;
+  }
+  .scroll-left {
+    margin-left: 5px;
+    margin-right: 5px;
+    left: 0;
+  }
+  .scroll-right {
+    margin-right: 5px;
+    right: 0;
+  }
+
+  .tansactions {
+    width: 800px;
+    height: 100%;
+    max-height: 300px;
+    margin: 30px auto;
+    background-color: rgba(27,26,31,255);
+    padding: 5px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .transactions h1 {
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .Transaction_table {
+    margin-left: 20px;
+    width: 90%;
+    border-collapse: collapse;
+    color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #888;
+  }
+  
+  .Transaction_table td {
+    border: 1px solid #888; /* Full border for each column + row */
+  }
+  
+  .table_labels td {
+    background-color: #5f5f94;
+    font-weight: bold;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  
+  .Data td {
+    padding: 10px;
+    background-color: #bcbcd4;
+    transition: background-color 0.2s;
+    color: black;
+  }
+  
+  .Data td:hover {
+    background-color: #3a3a52;
+    color: white;
+  }
+  

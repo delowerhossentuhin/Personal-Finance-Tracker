@@ -170,3 +170,105 @@ const pieChart = new Chart(ctx_piechart, {
         }
     }
 });
+
+const ctx_statistics = document.getElementById('statisctics').getContext('2d');
+
+const barChart_statistics = new Chart(ctx_statistics, {
+  type: 'bar',
+  data: {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September'],
+    datasets: [
+      {
+        label: 'Income',
+        data: [500, 600, 550, 700, 650, 680, 620, 700, 750],
+        backgroundColor: '#4caf50',
+        borderWidth: 1,
+        borderRadius: 6,
+        barThickness: 10
+      },
+      {
+        label: 'Expense',
+        data: [300, 350, 400, 420, 380, 390, 410, 430, 400],
+        backgroundColor: '#f44336',
+        borderWidth: 1,
+        borderRadius: 6,
+        barThickness: 10
+      },
+      {
+        label: 'Saving',
+        data: [200, 250, 150, 280, 270, 290, 210, 270, 350],
+        backgroundColor: '#2196f3',
+        borderWidth: 1,
+        borderRadius: 10,
+        barThickness: 10
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: true,
+    scales: {
+      x: {
+        display: false,
+        grid: { display: false },
+        categoryPercentage: 0.5,  // spacing between months (lower = more gap)
+                barPercentage: 0.8 
+      },
+      y: {
+        display: false,
+        grid: { display: false },
+        ticks: { display: false }
+      }
+    },
+    plugins: {
+      legend: { display: false },
+      tooltip: { enabled: true }
+    }
+  }
+});
+
+///////////// Event Listener
+document.getElementById('overview').addEventListener('click', function() {
+    document.getElementById('panel1').style.display = 'block';
+    document.getElementById('panel2').style.display = 'none';
+});
+
+document.getElementById('card').addEventListener('click', function() {
+    document.getElementById('panel1').style.display = 'none';
+    document.getElementById('panel2').style.display = 'block';
+});
+let cardCount = 2;
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cardContainer = document.getElementById("cardContainer");
+  const addCardBtn = document.getElementById("addCardBtn");
+  const scrollLeftBtn = document.getElementById("scrollLeftBtn");
+  const scrollRightBtn = document.getElementById("scrollRightBtn");
+
+  // Add new card when "+" is clicked
+  addCardBtn.addEventListener("click", () => {
+    const cardName = prompt("Enter the name for your new card:");
+    if (cardName && cardName.trim() !== "") {
+      const newCard = document.createElement("div");
+      newCard.className = "card";
+      newCard.textContent = cardName;
+      cardContainer.insertBefore(newCard, addCardBtn);
+    }
+  });
+
+  // Scroll left
+  scrollLeftBtn.addEventListener("click", () => {
+    cardContainer.scrollBy({
+      left: -160,
+      behavior: "smooth",
+    });
+  });
+
+  // Scroll right
+  scrollRightBtn.addEventListener("click", () => {
+    cardContainer.scrollBy({
+      left: 160,
+      behavior: "smooth",
+    });
+  });
+});
