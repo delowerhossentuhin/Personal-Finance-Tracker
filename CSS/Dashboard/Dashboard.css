@@ -19,7 +19,6 @@ body {
   height: 80px;
   display: flex;
 }
-
 .user-info {
   list-style-type: none;
   position: absolute;
@@ -32,7 +31,7 @@ body {
   margin: 0;
 }
 .username {
-  font-size: 19px;
+  font-size: 15px;
   font-weight: bold;
   line-height: 1.2;
   padding: 0;
@@ -41,7 +40,7 @@ body {
 
 .designation {
   margin: 0;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.2;
 }
 
@@ -236,4 +235,23 @@ body {
   height: 525px;
   background-color: rgba(27,26,31,255);
   border-radius: 20px;
+}
+#panel1_lineChart_balance{
+  margin-top: -140px;
+  margin-left: 70px;
+}
+#panel1_barChart_savings{
+  margin-top: -145px;
+  margin-left: 70px;
+  padding-left: 10px;
+  /* border: 2px solid red; */
+}
+#panel1_lineChart_income{
+  margin-top: -140px;
+  margin-left: 70px;
+}
+#panel1_pieChart_expense{
+  margin-left: 70px;
+  margin-top: -145px;
+
 }
