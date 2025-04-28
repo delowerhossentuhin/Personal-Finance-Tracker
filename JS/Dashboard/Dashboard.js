@@ -255,8 +255,6 @@ document.addEventListener("DOMContentLoaded", () => {
       cardContainer.insertBefore(newCard, addCardBtn);
     }
   });
-
-  // Scroll left
   scrollLeftBtn.addEventListener("click", () => {
     cardContainer.scrollBy({
       left: -160,
