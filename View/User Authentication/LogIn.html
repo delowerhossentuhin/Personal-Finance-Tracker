@@ -6,40 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="/CSS/User Authentication/LogIn.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="/JS/User Authentication/LogIn.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <h1>Login</h1>
-    </header>
-    <section aria-labelledby="login_form" class="login_form">
-        <form>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required />
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required />
+    <section aria-labelledby="login_form_heading" class="login_form">
+        <h2 id="login_form_heading">Login to Your Account</h2>
+        <form id="main_form">
+            <div class="form-group">
+                <!-- <label for="username">Username</label> -->
+                <input type="text" id="username" name="username" required class="inputbox" placeholder="Username" />
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <div class="form-group">
+                <!-- <label for="password">Password</label> -->
+                <input type="password" id="password" name="password" required class="inputbox" placeholder="Password" />
+                <i class="fa-solid fa-lock"></i>
+            </div>
 
             <div class="actions">
-                <button type="submit">Submit</button>
-                <a href="#">Forgot Password?</a>
+                <button type="submit" class="button" id="login_btn">Login</button>
+                <a href="#" id="forget_pass">Forgot Password?</a>
             </div>
+
+
+            <div class="signup">
+                <p>Don't have an account?</p>
+                <a href="/signup" class="signup-button">Sign Up</a>
+            </div>
+
+
+
         </form>
+        <footer>
+            <h4>Login With </h4>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-google"></i></a>
+        </footer>
     </section>
-
-
-
-    <section class="social_login">
-        <h2>Or Login With</h2>
-        <button>Login with Google</button>
-        <button>Login with Facebook</button>
-    </section>
-
-    <footer>
-        <p>Don't have an account?</p>
-        <a href="#">
-            <Button>SignUp</Button></a>
-    </footer>
 
 </body>
 
