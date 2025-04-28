@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="/CSS/User Authentication/SignUp.css">
+    <script src="/JS/User Authentication/SignUp.js"></script>
+</head>
+
+<body>
+    <section class="main_box">
+        <div class="content_box">
+            <div class="header">
+                <h2>SignUp Here</h2>
+            </div>
+            <div class="input_feild">
+                <input type="text" name="fname" id="fname" placeholder="First Name" class="place_style" required>
+            </div>
+            <div class="input_feild">
+                <input type="text" name="lname" id="lname" placeholder="Last Name" class="place_style" required>
+            </div>
+            <div class="input_feild">
+                <input type="number" name="phone" id="phone" placeholder="Phone" class="place_style" required>
+            </div>
+            <div class="input_feild">
+                <input type="email" name="email" id="email" placeholder="Email" class="place_style" required>
+            </div>
+            <div class="gender">
+                <h4>Gender</h4>
+                <div><label for="gmale">Male</label>
+                    <input type="radio" name="gender" id="gmale">
+                    <label for="gfmale">Female</label>
+                    <input type="radio" name="gender" id="gfmale">
+                    <label for="gothers">Others</label>
+                    <input type="radio" name="gender" id="gothers">
+                </div>
+
+            </div>
+            <div class="input_feild">
+                <input type="date" name="birthdate" id="birthdate" class="date_style" required>
+            </div>
+            <div class="Submit">
+                <button class="button">SignUp</button>
+            </div>
+            <div class="login">
+                <p>Already a User?</p>
+                <a href="/View/User Authentication/LogIn.html">LogIn</a>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+
+    </footer>
+</body>
+
+</html>

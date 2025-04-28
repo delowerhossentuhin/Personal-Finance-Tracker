@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  /* color: black; */
 }
 
 .login_form {
@@ -13,20 +14,21 @@
   justify-content: center;
 
   flex-direction: column;
-  background-color: #213555;
+  background-color: #ffffff;
   /* background-color:#162550; */
 }
 
 #login_form_heading {
   position: absolute;
   top: 60px;
-  color: aliceblue;
+  /* color: aliceblue; */
 }
 
 #main_form {
-  height: 400px;
+  height: 475px;
   width: 350px;
-  background-color: #3E5879;
+  background-color: #FFFFFF;
+  box-shadow: 2px 2px 20px rgba(29, 53, 87, 0.2);
 
 
   border-radius: 20px;
@@ -38,9 +40,9 @@
 }
 
 .form-group {
-  border-bottom: 2px solid whitesmoke;
+  border-bottom: 2px solid black;
   margin-top: 30px;
-  transition-duration: 1s;
+
 
 
 }
@@ -63,7 +65,7 @@
   outline: none;
   width: 250px;
   font-size: large;
-  color: whitesmoke;
+  /* color: whitesmoke; */
 }
 
 
@@ -78,7 +80,7 @@
   margin: 15px 0px;
   font-size: medium;
   text-align: center;
-  color: whitesmoke;
+  /* color: whitesmoke; */
 }
 
 .signup {
@@ -89,7 +91,7 @@
 
 .signup a {
   text-decoration: none;
-  color: whitesmoke;
+  /* color: whitesmoke; */
   margin-left: 8px;
 }
 
@@ -97,7 +99,7 @@ footer {
   display: flex;
   margin-top: 120px;
   font-size: large;
-  color: rgb(236, 225, 225);
+  /* color: rgb(236, 225, 225); */
   text-align: center;
 }
 
@@ -105,34 +107,42 @@ footer a {
   text-decoration: none;
   margin-left: 10px;
   font-size: 25px;
-  color: whitesmoke;
+  color: #4DA7D6;
 }
 
 footer a:hover,
 .signup a:hover,
 #forget_pass:hover {
-  color: red;
+  color: black;
   font-size: 18px;
   font-weight: 700;
 }
 
 
 .button {
-  border-radius: 20px;
-  height: 30px;
+  height: 50px;
   width: 250px;
-  font-size: 20px;
+  background-color: transparent;
+  color: black;
+  font-size: 18px;
   font-weight: 600;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 2px 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  /* Smooth animation */
 }
 
+
+
 .button:hover {
-  background-color: greenyellow;
+  background-color: #d62828;
+  /* Slightly darker */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  /* Lift effect */
   border-radius: 23px;
-  height: 33px;
-  width: 255px;
-  font-size: 25px;
-  font-weight: 700;
-
-  box-shadow: 6px 20px 16px 0 rgba(199, 18, 18, 0.2);
-
+  /* More rounded on hover */
+  color: #ffffff;
+  /* Text stays white */
 }
