@@ -38,18 +38,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
         if (settingPanel.style.display === 'none') {
             settingPanel.style.display = 'block';
             DashboardPanel.style.display="none"
-        } else {
-            settingPanel.style.display = 'none';
-        }
+        } 
     });   
     
     DashboardBTN.addEventListener('click',()=>{
         if(DashboardPanel.style.display==='none'||DashboardPanel.style.display===""){
             DashboardPanel.style.display="block"
             settingPanel.style.display = 'none';
-        }
-        else {
-            DashboardPanel.style.display="none"
         }
     })
 

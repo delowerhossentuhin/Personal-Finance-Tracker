@@ -1,0 +1,93 @@
+*{
+    background-color: white;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.headDiv{
+    top:20px;
+    right: 20px;
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap:20px;
+}
+.login{
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 15px;
+    color: white;
+    background-color: rgba(7,97,149,255);
+    cursor: pointer;
+}
+.signup{
+    text-decoration: none;
+    font-size: 16px;
+    border: 2px solid rgba(51,71,92,255);
+    padding: 8px 18px 8px 18px;
+    border-radius: 15px;
+    color: rgba(51,71,92,255);
+    font-weight: bold;
+    cursor: pointer;
+}
+.aboutus{
+    text-decoration: none;
+    font-size: 19px;
+    margin-right: 0px;
+    /* border: 2px solid rgba(51,71,92,255); */
+    padding: 8px 18px 8px 18px;
+    border-radius: 16px;
+    color: rgba(51,71,92,255);
+    font-weight: bold;
+    cursor: pointer;
+}
+.logo{
+    margin-top: -2px;
+    width: 150px;
+    height: 61px;
+    margin-left: 10px;
+}
+.right{
+    position: fixed;
+    display: flex;
+    top:100px;
+    left: 90px;
+    flex-direction: column;
+    gap: 0px;
+}
+.title{
+    color: rgba(0,65,90,255);
+    font-size: 40px;
+    /* font-weight: bold; */
+}
+.tagline{
+    color: rgba(0,65,90,255);
+    font-size: 20px;
+    margin-top: -20px;
+}
+.tagline2{
+    color: rgba(0,65,90,255);
+    font-size: 25px;
+    margin-top: 0px;
+}
+.started{
+    margin-top: 16px;
+    text-decoration: none;
+    width: 150px;
+    text-align: center;
+    padding: 10px 15px 10px  15px;
+    background-color: rgba(7,98,150,255);
+    border-radius: 15px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+.imageGr{
+    width: 400px;
+    height: 350px;
+    margin-left: 600px;
+    margin-top: 20px;
+}

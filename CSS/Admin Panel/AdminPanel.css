@@ -6,12 +6,10 @@
 .header {
     position: fixed;
     top:0px;
-
     margin-top: 0px;
     margin-left: 180px;
     width: calc(100% - 180px);
     height: 70px;
-    /* border: 2px solid red; */
     background-color: transparent;
     z-index: 1000;
 }
@@ -405,7 +403,7 @@
 .userInsight{
     position: relative;
     background-color: rgba(223, 228, 233, 0.274);
-    height: 300px;
+    height: auto;
     width: 300px;
     border: 2px solid rgba(255, 0, 0, 0);
     margin-top: -120px;
