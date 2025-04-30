@@ -26,10 +26,35 @@
             </div>
         </div>
     </header>
+    <div class="adminDetails"id="adminDetails">
+        <div class="imgandname">
+            <img src="/CSS/Admin Panel/images/tuhin.jpg" class="UimgEx">
+            <h1 class="nameEx">User Name</h1>
+        </div>
+        <ul class="poptions">
+            <li class="profileOptions">
+                <img src="/CSS/Admin Panel/images/info.png" class="profileOptionImg" alt="">
+                <a class="profileOptions2" href="#">Profile Information</a>
+            </li>
+            <li class="profileOptions">
+                <img src="/CSS/Admin Panel/images/support.png" class="profileOptionImg" alt="">
+                <a class="profileOptions2" href="#">Support and Help</a>
+            </li>
+            <hr class="line">
+            <li class="profileOptions">
+                <img src="/CSS/Admin Panel/images/account.png" class="profileOptionImg" alt="">
+                <a class="profileOptions2" href="#">Deactive/Close Account</a>
+            </li>
+            <li class="profileOptions">
+                <img src="/CSS/Admin Panel/images/logout.png" class="profileOptionImg" alt="">
+                <a class="profileOptions2" href="#">Logout</a>
+            </li>
+        </ul>
+    </div>
     <nav class="sideNav">
         <img class="mainLogo" src="/CSS/Admin Panel/images/Main_Logo.png" alt="">
         <ul class="menu">
-            <li class="menuRow">
+            <li class="menuRow" id="Dashboard">
                 <img class="menuIcon"src="/CSS/Admin Panel/images/home.png" alt="home">
                 <a class="subMenu" href="#">Dashboard</a>
             </li>
@@ -54,12 +79,86 @@
                 <img class="menuIcon"src="/CSS/Admin Panel/images/report.png" alt="home">
                 <a class="subMenu" href="#">Reports</a>
             </li>
-            <li class="menuRow">
+            <li class="menuRow" id="setting">
                 <img class="menuIcon"src="/CSS/Admin Panel/images/settings.png" alt="home">
-                <a class="subMenu" href="#">Setting</a>
+                <a class="subMenu" href="#">Settings</a>
             </li>
         </ul>
     </nav>
+    <div class="settingPanel" id="settingPanel">
+        <div class="adminAccountSetting">
+            <img src="/CSS/Admin Panel/images/adminSetting.png" alt="Settings Icon" class="settingIcon">
+            <h1 class="headline">Admin Account Setting</h1>
+            <ul class="options">
+                <li class="optionsList">Change Admin Password</li>
+                <li class="optionsList">Update Email/UserName</li>
+                <li class="optionsList">Add/Remove Admins</li>
+                <li class="optionsList">Two Factor Authentications</li>
+            </ul>
+        </div>
+        <div class="adminAppearence">
+            <img src="/CSS/Admin Panel/images/ui.png" alt="Settings Icon" class="settingIcon">
+            <h1 class="headline">Appearence Setting</h1>
+            <ul class="options">
+                <li class="optionsList">Change Brand Logo</li>
+                <li class="optionsList">Email and Notification Setting</li>
+                <li class="optionsList">Language Setting</li>
+            </ul>
+        </div>
+        <div class="systemConfiguration">
+            <img src="/CSS/Admin Panel/images/system.png" alt="Settings Icon" class="settingIcon">
+            <h1 class="headline">System Configuration</h1>
+            <ul class="options">
+                <li class="optionsList">Enable Maintainence Mode</li>
+                <li class="optionsList">BackUp and Recovery Setting</li>
+            </ul>
+        </div>
+    </div>
+    <div class="dashboardPanel" id="dashboardPanel">
+        <div class="summarydiv">
+            <h1 class="scard">Summary Card (Top Metrics)</h1>
+            <div class="sdivTotalUser">
+                <h1>Total User</h1>
+                <h2>12,50</h1>
+            </div>
+            <div class="sdivActiveUser">
+                <h1>Active User</h1>
+                <h2>250</h1>
+            </div>
+            <div class="sdivTotalTransaction">
+                <h1>Total Transaction</h1>
+                <h2>250</h1>
+            </div>
+        </div>
+        <div class="userInsight">
+            <h1>User Insights</h1>
+            <ul class="ULuserInsight">
+                <li class="ULset">
+                    <img class="ULicon" src="/CSS/Admin Panel/images/user.png">
+                    <a class="ULa" href="#">Top User</a>
+                    <img class="ULarrow" src="/CSS/Admin Panel/images/forward.png" alt="">
+                </li>
+                <hr class="ULline">
+                <li class="ULset">
+                    <img class="ULicon" src="/CSS/Admin Panel/images/activeUser.png">
+                    <a class="ULa" href="#">Most Active User</a>
+                    <img class="ULarrow" src="/CSS/Admin Panel/images/forward.png" alt="">
+                </li>
+                <hr class="ULline">
+                <li class="ULset">
+                    <img class="ULicon" src="/CSS/Admin Panel/images/newUser.png">
+                    <a class="ULa" href="#">Newly Registered Users (Last 7 Days)</a>
+                    <img class="ULarrow" src="/CSS/Admin Panel/images/forward.png" alt="">
+                </li>
+                <hr class="ULline">
+                <li class="ULset">
+                    <img class="ULicon" src="/CSS/Admin Panel/images/alert.png">
+                    <a class="ULa" href="#">Suspicious or Unusual Activily Alerts</a>
+                    <img class="ULarrow" src="/CSS/Admin Panel/images/forward.png" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
     <script src="/JS/Admin Panel/AdminPanel.js"></script>
 </body>
 </html>
