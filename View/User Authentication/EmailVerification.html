@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email Verification</title>
+    <link rel="stylesheet" href="/CSS/User Authentication/EmailVerification.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="/JS/User Authentication/EmailVerification.js"></script>
+</head>
+
+<body>
+
+    <div class="forgot-container">
+        <h2>Verify Your Email</h2>
+        <p>We’ve sent a 6-digit verification code to your email address.</p>
+
+        <form id="verify-form">
+            <input type="text" id="verification-code" placeholder="Enter verification code" maxlength="6" required />
+            <button type="submit">Verify</button>
+            <p class="message" id="success-message">Code Verified! Redirecting...</p>
+        </form>
+
+        <a href="/View/User Authentication/ForgetPassword.html" class="back-link">← Back to Forget Password</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

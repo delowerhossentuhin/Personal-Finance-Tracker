@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0d1f2d, #1e3c72);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.forgot-container {
+    background-color: #111;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.forgot-container h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.forgot-container p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+.forgot-container input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.forgot-container input[type="text"]::placeholder {
+    color: #666;
+}
+
+.forgot-container input[type="text"]:focus {
+    border-color: #fff;
+    outline: none;
+}
+
+.forgot-container button {
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 12px 20px;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.forgot-container button:hover {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.back-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #fff;
+}
+
+.message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #00ff88;
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .forgot-container {
+        padding: 30px 20px;
+    }
+}

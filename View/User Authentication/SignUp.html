@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
     <link rel="stylesheet" href="/CSS/User Authentication/SignUp.css">
-    <script src="/JS/User Authentication/SignUp.js"></script>
+    <script src="/JS/User Authentication/SignUp.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 
 <body>
@@ -29,31 +31,32 @@
             </div>
             <div class="gender">
                 <h4>Gender</h4>
-                <div><label for="gmale">Male</label>
-                    <input type="radio" name="gender" id="gmale">
-                    <label for="gfmale">Female</label>
-                    <input type="radio" name="gender" id="gfmale">
-                    <label for="gothers">Others</label>
-                    <input type="radio" name="gender" id="gothers">
+                <div>
+                    <label><input type="radio" name="gender" value="male"> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                    <label><input type="radio" name="gender" value="other"> Other</label>
                 </div>
-
             </div>
             <div class="input_feild">
                 <input type="date" name="birthdate" id="birthdate" class="date_style" required>
             </div>
             <div class="Submit">
-                <button class="button">SignUp</button>
+                <button id="signup_btn" class="button" type="submit">SignUp</button>
+
             </div>
             <div class="login">
                 <p>Already a User?</p>
                 <a href="/View/User Authentication/LogIn.html">LogIn</a>
             </div>
         </div>
+        <footer>
+            <h4>SignUp With </h4>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-google"></i></a>
+        </footer>
 
     </section>
-    <footer>
 
-    </footer>
 </body>
 
 </html>
