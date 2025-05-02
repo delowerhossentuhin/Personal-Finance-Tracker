@@ -16,8 +16,8 @@
 }
 .login{
     text-decoration: none;
-    font-size: 16px;
-    padding: 10px 20px 10px 20px;
+    font-size: 18px;
+    padding: 8px 20px 8px 20px;
     border-radius: 15px;
     color: white;
     background-color: rgba(7,97,149,255);
@@ -82,9 +82,10 @@
     background-color: rgba(7,98,150,255);
     border-radius: 15px;
     color: white;
-    font-size: 25px;
+    font-size: 23px;
     font-weight: bold;
 }
+
 .imageGr{
     width: 400px;
     height: 350px;

@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
     DashboardBTN=document.getElementById("Dashboard")
     DashboardPanel=document.getElementById("dashboardPanel")
     //
+    settingPanel.style.display = 'none';      // Hide settings by default
+    DashboardPanel.style.display = 'block';   // Show dashboard by default
     allPendingIcon.addEventListener('click',()=>{
         if (pendingUser.style.display === 'none' || pendingUser.style.display === '') {
             pendingUser.style.display = 'flex'; 
@@ -47,5 +49,15 @@ document.addEventListener("DOMContentLoaded", ()=>{
             settingPanel.style.display = 'none';
         }
     })
+    
+    notificationContainer = document.getElementById("Notification-Div");
+    fetch("/View/Notification/Notification.html")
+        .then(response => response.text())
+        .then(html => {
+        notificationContainer.innerHTML = html;
+        })
+        .catch(error => {
+        console.error("Failed to load panel1:", error);
+    });
 
 })
