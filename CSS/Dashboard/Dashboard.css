@@ -10,15 +10,16 @@ body {
   overflow-y: auto;
   height: 100vh;
 }
-
+/*///////////////////////////// Header Panel//////////////////////////////////////////*/
 .Header {
-  background-color: rgba(19, 19, 19, 255);
   position: fixed;
   top: 0;
-  left: 180px;
+  left: 200px;
   height: 80px;
   display: flex;
-  /* z-index: 1000; */
+  z-index: 1000;
+  background-color: rgba(19, 19, 19, 255);
+  width: 880px;
 }
 .user-info {
   list-style-type: none;
@@ -95,16 +96,18 @@ body {
   color: white;
   margin-left: 10px;
 }
-
+/*///////////////////////////// Header Panel//////////////////////////////////////////*/
 .SideNav {
   position: fixed;
   padding: 0;
   margin-top: 0px;
-  width: 180px;
+  width: 200px;
   height: 100vh;
   background-color: rgba(15, 137, 155, 255);
   overflow-y: auto;
   overflow-x: hidden;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .SideNav .LogoImg {
@@ -125,6 +128,7 @@ body {
   padding-left: 0;
   margin: 10px 0;
   gap: 0px;
+  margin-left: -10px;
 }
 
 .menuRow {
@@ -132,10 +136,11 @@ body {
   align-items: center;
   gap: 15px;
   padding: 5px 15px;
-  margin-left: 14px;
+  margin-left: 15px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   transition: all 0.2s ease-in-out;
+  width: 190px;
 }
 
 .menuRow:hover {
@@ -166,12 +171,14 @@ body {
 .panel1{
   position:absolute;
   top:80px;
-  left: 180px;
+  left: 200px;
   display: block;
-  width: 900px;
+  width: 880px;
   height: 600px;
   background-color: rgba(19, 19, 19, 255);
+  overflow-x: hidden;
 }
+
 .balance{
   position: absolute;
   margin-top: 5px;
@@ -233,7 +240,7 @@ body {
   position: absolute;
   margin-top: 5px;
   margin-left: 590px;
-  width: 290px;
+  width: 270px;
   height: 525px;
   background-color: rgba(27,26,31,255);
   border-radius: 20px;
@@ -264,10 +271,11 @@ body {
   position:absolute;
   display: none;
   top:80px;
-  left: 180px;
-  width: 900px;
+  left: 200px;
+  width: 880px;
   height: 650px;
   background-color: rgba(19, 19, 19, 255);
+  overflow-x: hidden;
 
 }
 .panel2 h1{
@@ -279,7 +287,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 60px;
+  margin-left: 45px;
   margin-top: 10px;
   position: relative;
   width: 100%;

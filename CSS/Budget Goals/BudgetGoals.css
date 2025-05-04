@@ -1,0 +1,242 @@
+* {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+/*///////////////////////////// Header Panel//////////////////////////////////////////*/
+.Header {
+    position: fixed;
+    top: 0;
+    left: 00px;
+    height: 70px;
+    display: flex;
+    z-index: 1000;
+    background-color: rgba(19, 19, 19, 255);
+    width: 100%;
+  }
+  .logo{
+    margin: 10px auto auto 15px;
+    display: block;
+    width: 120px;
+    height: 50px;
+}
+  .user-info {
+    list-style: none;
+    position: fixed;
+    color: aliceblue;
+    text-align: left;
+    left: 930px;
+    gap: 0px;
+    width: 150px;
+    height: 60px;
+    padding: 0;
+    margin-top: 20px;
+    appearance: none;
+    
+  }
+  .username {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .designation {
+    margin: 0;
+    font-size: 12px;
+  }
+  
+  .Uimg {
+    position: relative;
+    top:20px;
+    margin-left: auto;
+    margin-right: 30px;
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .Unotify {
+    position: fixed;
+    top:25px;
+    left: 880px;
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    margin-right: 15px;
+  }
+  
+  .search-bar {
+    position: absolute;
+    left: 320px;
+    top: 25px;
+    display: flex;
+    align-items: center;
+  }
+  .search-bar input {
+    color: white;
+    background-color: transparent;
+    width: 450px;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid white;
+  }
+  
+  .search-bar input::placeholder {
+    color: white;
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+  }
+  
+  .search-bar .fa-search {
+    color: white;
+    margin-left: 10px;
+  }
+  /*///////////////////////////// Header Panel//////////////////////////////////////////*/
+
+    /*///////////////////////////// Body Class //////////////////////////////////////////*/
+
+.bodyclass{
+    padding-top: 75px;
+    width: 100%;
+    height: auto;
+    background-color: rgba(86, 150, 209, 0.219);
+    margin: 0;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.setBudget{
+    position: relative;
+    /* border: 2px solid red; */
+
+    margin-top: -5px;
+    padding-bottom: 50px;
+    height: auto;
+    background-color: rgba(15, 137, 155, 255);
+    width: 100%;
+}
+.setBudget h1{
+    color: white;
+    margin: 10px 0px -5px 30px;
+    font-size: 30px;
+}
+.line{
+    margin-top: -5px;
+    height: 3px;;
+    background-color: white;
+}
+.setBudget h2{
+    color: white;
+    margin: 5px 0px 0px 30px;
+    font-size: 22px;
+}
+.setTargetText{
+    background-color: transparent;
+    width: 200px;
+    height: 30px;
+    margin-left: 70px;
+    margin-top: 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+}
+.setTargetText input:focus{
+    outline: none;
+    border: 2px solid white;
+}
+.setTargetBTN{
+    text-decoration: none;
+    margin-left: 10px;
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    font-weight: bold;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    color: rgba(15, 137, 155, 255);
+}
+
+
+
+
+.catg {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 70px ;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+.category-box {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 6px;
+    min-width: 100px;
+    max-width: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: black;
+}
+.category-box label {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.category-box input {
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid gray;
+    border-radius: 4px;
+    height: 20px;
+}
+
+.button-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 5px;
+}
+
+.save-btn{
+    font: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.edit-btn{
+    font: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-left: 10px;
+}
+
+.addCatg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 2px dashed white;
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
