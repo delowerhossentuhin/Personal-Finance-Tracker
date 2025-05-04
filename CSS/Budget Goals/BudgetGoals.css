@@ -111,26 +111,26 @@
 }
 .setBudget{
     position: relative;
-    /* border: 2px solid red; */
-
-    margin-top: -5px;
+    margin-top: 10px;
+    margin-left: 1%;
     padding-bottom: 50px;
     height: auto;
-    background-color: rgba(15, 137, 155, 255);
-    width: 100%;
+    background-color:rgba(255,250,238,255);
+    width: 98%;
+    border-radius: 20px;
 }
 .setBudget h1{
-    color: white;
+    color: black;
     margin: 10px 0px -5px 30px;
     font-size: 30px;
 }
 .line{
     margin-top: -5px;
     height: 3px;;
-    background-color: white;
+    background-color: black;
 }
 .setBudget h2{
-    color: white;
+    color: black;
     margin: 5px 0px 0px 30px;
     font-size: 22px;
 }
@@ -140,9 +140,9 @@
     height: 30px;
     margin-left: 70px;
     margin-top: 20px;
-    border: 2px solid white;
+    border: 2px solid black;
     border-radius: 5px;
-    color: white;
+    color: black;
     font-size: 20px;
 }
 .setTargetText input:focus{
@@ -154,17 +154,14 @@
     margin-left: 10px;
     width: 100px;
     height: 30px;
-    background-color: white;
+    background-color: black;
     font-weight: bold;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
-    color: rgba(15, 137, 155, 255);
+    color: white
 }
-
-
-
 
 .catg {
     display: flex;
@@ -174,15 +171,15 @@
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 20px;
-    border: 2px solid white;
+    border: 2px solid black;
     border-radius: 20px;
 }
 .category-box {
-    background-color: #ffffff;
+    background-color: rgba(86, 150, 209, 0.219);
     padding: 10px;
     border-radius: 6px;
     min-width: 100px;
-    max-width: 140px;
+    max-width: 180px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -232,11 +229,114 @@
     align-items: center;
     width: 50px;
     height: 50px;
-    border: 2px dashed white;
+    border: 2px dashed black;
     border-radius: 50%;
-    color: white;
+    color: black;
     font-size: 24px;
     cursor: pointer;
     margin-top: 15px;
 }
+.bodyclass .pTitle  {
+  font-size: 20px;
+  margin-top: 10px;
+  color: black;
+}
+.progress_bar{
+  width: 50%;
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 50px;
+  border: 2px solid black ;
+  padding-left: 20px;
+  padding-top: 10px;
+  border-radius: 20px;
+}
+.progress-container {
+  margin-left: 30px;
+  width: 70%;
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0.123);
+  margin: 10px 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
 
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #cf4540;
+  transition: width 0.5s ease;
+}
+.setting{
+  width: 400px;
+  height: auto;
+  border: 2px solid black;
+  margin-left: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+.setting .alertTitle{
+  color: black;
+  font-size: 22px;
+  margin-top: 0px;
+  margin-left: 35%;
+  padding: 0;
+}
+.alerts{
+  margin-left: 30px;
+  margin-top: 25px;
+}
+
+/* Making A Toggle Button*/
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 24px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px; width: 26px;
+  left: 4px; bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.eachAlert{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-bottom: 10px;
+}
+.eachAlertLabel{
+  font-size: 17px;
+  font-weight: bold;
+}
