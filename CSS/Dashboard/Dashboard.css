@@ -21,6 +21,7 @@ body {
   background-color: rgba(19, 19, 19, 255);
   width: 880px;
 }
+
 .user-info {
   list-style-type: none;
   position: absolute;

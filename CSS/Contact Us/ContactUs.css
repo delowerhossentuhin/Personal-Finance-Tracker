@@ -42,11 +42,12 @@
 }
 .form{
     width: 47%;
-    height: auto;
+    height: 350px;
     background-color: white;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
+    margin-right: 50px;
 }
 .contacts{
     margin-top: 40px;
@@ -118,7 +119,7 @@
     width: 150px;
     height: 40px;
     margin-top: 280px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     margin-right: 20px;
     font-size: 17px;
     border-radius: 10px;
