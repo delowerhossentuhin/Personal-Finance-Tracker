@@ -244,6 +244,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const addCardBtn = document.getElementById("addCardBtn");
   const scrollLeftBtn = document.getElementById("scrollLeftBtn");
   const scrollRightBtn = document.getElementById("scrollRightBtn");
+  const menuShow=document.getElementById("showMenu")
+  const SideNav=document.getElementById("SideNav")
+  const panel1=document.getElementById('panel1')
+  const panel2=document.getElementById('panel2')
+
+  menuShow.addEventListener('click',()=>{
+    if(SideNav.style.display=='block'){
+        SideNav.style.display='none'
+        panel1.style.left="100px"
+        panel2.style.left="100px"
+    }
+    else {
+        SideNav.style.display='block'
+        panel1.style.left="200px"
+        panel2.style.left="200px"
+    }
+  })
 
   // Add new card when "+" is clicked
   addCardBtn.addEventListener("click", () => {
