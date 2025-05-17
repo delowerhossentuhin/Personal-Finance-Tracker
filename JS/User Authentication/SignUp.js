@@ -5,6 +5,8 @@ const phone = document.getElementById("phone");
 const email = document.getElementById("email");
 const date = document.getElementById("birthdate");
 const section = document.querySelector("footer");
+const password = document.getElementById('password');
+const username = document.getElementById('username');
 
 // Button
 const signup = document.getElementById("signup_btn");
@@ -14,7 +16,7 @@ function isFilled(...fields) {
     return fields.every(field => field.value.trim() !== "");
 }
 
-function isValidLength(str, maxLength = 11) {
+function isValidLength(str, maxLength = 30) {
     return str.trim().length <= maxLength;
 }
 
@@ -35,21 +37,26 @@ signup.addEventListener("click", function () {
     const selectedGender = getSelectedGender();
 
     // Validation checks
-    if (!isFilled(first_name, last_name, phone, email, date)) {
-        error.innerText = "All input fields must be filled.";
+    if (!isFilled(first_name, last_name, phone, email, date, password,username)) {
+        // error.innerText = "All input fields must be filled.";
+        alert("All input fields must be filled.");
     } else if (
         !isValidLength(first_name.value) ||
         !isValidLength(last_name.value) ||
         !isValidLength(phone.value)
     ) {
-        error.innerText = "First Name, Last Name, and Phone must be less than or equal to 11 characters.";
+        // error.innerText = "First Name, Last Name, and Phone must be less than or equal to 11 characters.";
+        alert("First Name, Last Name, and Phone must be less than or equal to 11 characters.");
     } else if (!selectedGender) {
-        error.innerText = "Please select a gender.";
+        // error.innerText = "Please select a gender.";
+        alert("Please select a gender.");
     } else {
         // Form is valid — you can proceed (e.g., submit or show success)
-        error.innerText = "Form submitted successfully!";
-        error.style.color="blue"
-        
+        // error.innerText = "Form submitted successfully!";
+        alert("Form submitted successfully!")
+        // error.style.color = "blue";
+        // window.location.href='../../View/User Authentication/LogIn.html';
+
     }
 
     section.insertAdjacentElement('afterend', error);

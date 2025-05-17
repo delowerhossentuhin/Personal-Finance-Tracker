@@ -16,9 +16,8 @@
 }
 
 .content_box {
-  height: 75vh;
-
-  width: 500px;
+  height: 85vh;
+  width: 450px;
   background-color: #ffff;
   display: flex;
   justify-content: center;

@@ -1,25 +1,29 @@
-const form = document.getElementById('forgot-form');
-const emailInput = document.getElementById('email');
-const message = document.getElementById('message');
+const new_pass_input = document.getElementById('new_pass_input');
+const retype_new_pass_input = document.getElementById('retype_new_pass_input');
+const error = document.getElementById('error');
 
-form.addEventListener('submit', function (e) {
-  e.preventDefault(); // Prevent form from reloading
+const new_pass_submit_btn = document.getElementById('new_pass_submit');
 
-  const email = emailInput.value.trim();
+const new_pass_content_section = document.querySelector(".new_pass_content");
+new_pass_submit_btn.addEventListener('click', function (event) {
+    event.preventDefault();
+    if(new_pass_input.value==""|| new_pass_input.value=="")
+    {
+            error.innerText="Please Enter password";
+        
+    }else{
+        if(new_pass_input.value.length<5)
+        {
+            error.innerText="Password Must Be More than 5 charecter";
+        }else if(new_pass_input.value!=retype_new_pass_input.value)
+        {
+            error.innerText="Both Password Not Same";
+        }else{
+             window.location.href = '../../View/User Authentication/LogIn.html';
+        }
+        
+    }
+   
 
-  // Simple email validation
-  if (email === "" || !validateEmail(email)) {
-    alert("Please enter a valid email address.");
-    return;
-  }
 
-  // Simulate success message
-  message.style.display = "block";
-
-  // You can integrate real backend email handling here (e.g., fetch('/reset', { method: 'POST', ... }))
-});
-
-function validateEmail(email) {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return regex.test(email);
-}
+})

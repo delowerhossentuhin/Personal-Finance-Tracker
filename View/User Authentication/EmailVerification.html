@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email Verification</title>
-    <link rel="stylesheet" href="/CSS/User Authentication/EmailVerification.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <script src="/JS/User Authentication/EmailVerification.js"></script>
+    <link rel="stylesheet" href="../../CSS/User Authentication/EmailVerification.css">
+    <script src="../../JS/User Authentication/EmailVerification.js" defer></script>
 </head>
-
 <body>
+   <section class="main_content">
+        <h2>Verify Email</h2>
 
-    <div class="forgot-container">
-        <h2>Verify Your Email</h2>
-        <p>We’ve sent a 6-digit verification code to your email address.</p>
-
-        <form id="verify-form">
-            <input type="text" id="verification-code" placeholder="Enter verification code" maxlength="6" required />
-            <button type="submit">Verify</button>
-            <p class="message" id="success-message">Code Verified! Redirecting...</p>
+        <form action="#" class="Email_Verify_content" method="post">
+            <div class="current_pass">
+                <input type="text" name="username" id="Email_input" placeholder="Enter Email Address" required>
+            </div>
+            <div class="check_current_passBtn">
+                <button type="submit" id="Email_submit">Submit</button>
+            </div>
         </form>
 
-        <a href="/View/User Authentication/ForgetPassword.html" class="back-link">← Back to Forget Password</a>
-    </div>
 
-    <script src="/JS/User Authentication/EmailVerification.js"></script>
+
+        <form action="#" class="Otp_content">
+            <div class="new_pass">
+                <input type="number" name="OTP_input" id="OTP_input" placeholder="Enter 4 Digit Code " required>
+                
+            </div>
+            <div class="save_btn">
+                <button type="submit" id="OTP_submit">Save</button>
+            </div>
+
+
+
+        </form>
+    </section>
 </body>
-
 </html>

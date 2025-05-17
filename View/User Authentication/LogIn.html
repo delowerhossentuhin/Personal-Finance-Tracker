@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/CSS/User Authentication/LogIn.css">
+    <link rel="stylesheet" href="../../CSS/User Authentication/LogIn.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <script src="/JS/User Authentication/LogIn.js" defer></script>
+    <script src="../../JS/User Authentication/LogIn.js" defer></script>
 </head>
 
 <body>
 <h2 id="login_form_heading">Login to Your Account</h2>
     <section aria-labelledby="login_form_heading" class="login_form">
         
-        <form id="main_form" method="post">
+        <form id="main_form" method="post" action="../../Controller/LoginCheck.php">
             <div class="form-group">
                 <!-- <label for="username">Username</label> -->
                 <input type="text" id="username" name="username" required class="inputbox" placeholder="Username" />
@@ -29,14 +29,15 @@
             </div>
 
             <div class="actions">
-                <button type="submit" class="button" id="login_btn">Login</button>
-                <a href="/View/User Authentication/ForgetPassword.html" id="forget_pass">Forgot Password?</a>
+                <!-- <button type="submit" class="button" id="login_btn" name="submit">Login</button> -->
+                 <button type="submit" name="submit" class="button" >Login</button>
+                <a href="EmailVerification.html" id="forget_pass">Forgot Password?</a>
             </div>
 
 
             <div class="signup">
                 <p>Don't have an account?</p>
-                <a href="/View/User Authentication/SignUp.html" class="signup-button">Sign Up</a>
+                <a href="SignUp.html" class="signup-button">Sign Up</a>
             </div>
         </form>
         <footer>

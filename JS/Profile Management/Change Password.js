@@ -25,7 +25,7 @@ current_pass_submit_btn.addEventListener('click', function (event) {
 new_pass_submit_btn.addEventListener('click', function (event) {
     event.preventDefault();
 
-    window.location.href = '/Personal-Finance-Tracker/View/Profile Management/View profile.html';
+    window.location.href = '../../View/Profile Management/View profile.html';
 
 
 })

@@ -69,7 +69,7 @@ cancelBtn.addEventListener('click', () => {
 });
 
 changePassBtn.addEventListener('click', () => {
-  window.location.href = '/Personal-Finance-Tracker/View/Profile Management/Change Password.html';
+  window.location.href = '/View/Profile Management/Change Password.html';
 });
 
 
