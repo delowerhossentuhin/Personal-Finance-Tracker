@@ -16,8 +16,14 @@ function login($user)
 
 }
 
-function getUserById($id)
+function getUserByUsername()
 {
+    $con = getConnection();
+    $username = $_SESSION['username'];
+    $sql = "select * from user where username='$username'";
+    $result = mysqli_query($con, $sql);
+    $userData = mysqli_fetch_assoc($result);
+    return $userData;
 
 
 }
@@ -37,13 +43,13 @@ function addUser($user)
     $con = getConnection();
     $fname = $user['fname'];
     $lname = $user['lname'];
-    $full_name = $fname.$lname;
+    $full_name = $fname . ' ' . $lname;
     $phone = $user['phone'];
     $email = $user['email'];
     $gender = $user['gender'];
     $birth_date = $user['birthdate'];
     $password = $user['password'];
-    $username= $user['username'];
+    $username = $user['username'];
     $sql = "INSERT INTO user (first_name, last_name,full_name, phone, email,gender,birth_date,password,username) VALUES ( '$fname', '$lname', '$full_name', '$phone', '$email','$gender','$birth_date', '$password','$username')";
     if (mysqli_query($con, $sql)) {
         return true;
