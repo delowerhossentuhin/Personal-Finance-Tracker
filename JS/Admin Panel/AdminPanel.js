@@ -8,9 +8,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
     adminDetails=document.getElementById('adminDetails')
     DashboardBTN=document.getElementById("Dashboard")
     DashboardPanel=document.getElementById("dashboardPanel")
+    alluserBTN=document.getElementById('alluser')
+    alluserPanel=document.getElementById('allUserPanel')
     //
     settingPanel.style.display = 'none';      // Hide settings by default
-    DashboardPanel.style.display = 'block';   // Show dashboard by default
+    DashboardPanel.style.display = 'block'; 
+    alluserPanel.style.display='none'  // Show dashboard by default
     allPendingIcon.addEventListener('click',()=>{
         if (pendingUser.style.display === 'none' || pendingUser.style.display === '') {
             pendingUser.style.display = 'flex'; 
@@ -40,6 +43,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         if (settingPanel.style.display === 'none') {
             settingPanel.style.display = 'block';
             DashboardPanel.style.display="none"
+            alluserPanel.style.display='none'
         } 
     });   
     
@@ -47,17 +51,26 @@ document.addEventListener("DOMContentLoaded", ()=>{
         if(DashboardPanel.style.display==='none'||DashboardPanel.style.display===""){
             DashboardPanel.style.display="block"
             settingPanel.style.display = 'none';
+            alluserPanel.style.display='none'
         }
-    })
-    
-    notificationContainer = document.getElementById("Notification-Div");
-    fetch("/View/Notification/Notification.html")
-        .then(response => response.text())
-        .then(html => {
-        notificationContainer.innerHTML = html;
-        })
-        .catch(error => {
-        console.error("Failed to load panel1:", error);
     });
+    alluserBTN.addEventListener('click',()=>{
+        if(alluserPanel.style.display==='none'||alluserPanel.style.display===""){
+            alluserPanel.style.display='block'
+            DashboardPanel.style.display="none"
+            settingPanel.style.display = 'none';
+            
+        }
+    });
+    
+    // notificationContainer = document.getElementById("Notification-Div");
+    // fetch("../../View/Notification/Notification.html")
+    //     .then(response => response.text())
+    //     .then(html => {
+    //     notificationContainer.innerHTML = html;
+    //     })
+    //     .catch(error => {
+    //     console.error("Failed to load panel1:", error);
+    // });
 
 })

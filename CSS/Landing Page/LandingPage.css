@@ -5,16 +5,17 @@
     overflow-y: hidden;
 }
 .headDiv{
+    position: fixed;
     top:20px;
     right: 20px;
     display: flex;
-    position: fixed;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: space-between;
     gap:20px;
 }
 .login{
+    position: fixed;
     text-decoration: none;
     font-size: 18px;
     padding: 8px 20px 8px 20px;
@@ -24,6 +25,7 @@
     cursor: pointer;
 }
 .signup{
+    position: fixed;
     text-decoration: none;
     font-size: 16px;
     border: 2px solid rgba(51,71,92,255);
@@ -34,6 +36,7 @@
     cursor: pointer;
 }
 .aboutus{
+    position: fixed;
     text-decoration: none;
     font-size: 19px;
     margin-right: 0px;
@@ -44,12 +47,22 @@
     font-weight: bold;
     cursor: pointer;
 }
-.logo{
-    margin-top: -2px;
-    width: 150px;
-    height: 61px;
+.logo-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 20px; 
     margin-left: 10px;
 }
+
+.logo {
+    position: absolute;
+    width: 150px;
+    height: 61px;
+    left: 0;
+    top: 0;
+}
+
 .right{
     position: fixed;
     display: flex;
@@ -59,21 +72,25 @@
     gap: 0px;
 }
 .title{
+    position: fixed;
     color: rgba(0,65,90,255);
     font-size: 40px;
     /* font-weight: bold; */
 }
 .tagline{
+    position: fixed;
     color: rgba(0,65,90,255);
     font-size: 20px;
     margin-top: -20px;
 }
 .tagline2{
+    position: fixed;
     color: rgba(0,65,90,255);
     font-size: 25px;
     margin-top: 0px;
 }
 .started{
+    position: fixed;
     margin-top: 16px;
     text-decoration: none;
     width: 150px;
@@ -87,6 +104,7 @@
 }
 
 .imageGr{
+    position: fixed;
     width: 400px;
     height: 350px;
     margin-left: 600px;

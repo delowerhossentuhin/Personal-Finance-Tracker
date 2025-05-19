@@ -24,10 +24,7 @@ function getUserByUsername()
     $result = mysqli_query($con, $sql);
     $userData = mysqli_fetch_assoc($result);
     return $userData;
-
-
 }
-
 function getAllUser()
 {
 

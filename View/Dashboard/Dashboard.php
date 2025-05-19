@@ -21,12 +21,7 @@ if ($_SESSION['status']) {
       <img src="../../CSS/Dashboard/images/menu.png" alt="" class="menuI" id="showMenu">
       <ul>
         <li class="user-info">
-
-          <p class="username">User Name</p>
-          <p class="designation">Designation</p>
-        </li>
-        <li class="user-info">
-          <p class="username">User Name</p>
+          <p class="username"><?= $_SESSION['username'] ?></p>
           <p class="designation">Designation</p>
         </li>
       </ul>
@@ -50,11 +45,11 @@ if ($_SESSION['status']) {
         </li>
         <li class="menuRow">
           <img class="menuIcon" src="../../CSS/Dashboard/images/Budget.png" />
-          <a class="subMenu" href="../../View/Budget Goals/BudgetGoals.html">Budget Goal</a>
+          <a class="subMenu" href="../../View/Budget Goals/BudgetGoals.php">Budget Goal</a>
         </li>
         <li class="menuRow">
           <img class="menuIcon" src="../../CSS/Dashboard/images/debt.png" />
-          <a class="subMenu" href="../../View/Debt Tracking/DebtTracking.html">Debt and Payment</a>
+          <a class="subMenu" href="../../View/Debt Tracking/DebtTracking.php">Debt and Payment</a>
         </li>
         <li class="menuRow">
           <img class="menuIcon" src="../../CSS/Dashboard/images/statistics.png" />
