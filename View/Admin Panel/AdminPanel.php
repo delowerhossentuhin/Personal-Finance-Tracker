@@ -8,91 +8,91 @@ if($_SESSION['status']){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../CSS/Admin Panel/AdminPanel.css">
+    <link rel="stylesheet" href="../../Asset/CSS/Admin Panel/AdminPanel.css">
     <title>Admin Panel</title>
 </head>
 <body>
     <header class="header">
         <div class="head">
-            <img src="../../CSS/Admin Panel/images/dashBoard.png" alt="" class="dashimg">
+            <img src="../../Asset/CSS/Admin Panel/images/dashBoard.png" alt="" class="dashimg">
             <h1 class="dashText">Dashboard</h1>
             <div class="searchDiv">
                 <input type="text" id="searchText" placeholder="Search...">
-                <img src="../../CSS/Admin Panel/images/search.png" alt="" class="searchIcon">
+                <img src="../../Asset/CSS/Admin Panel/images/search.png" alt="" class="searchIcon">
             </div>
-            <img src="../../CSS/Admin Panel/images/notification.png" alt="" class="notification">
+            <img src="../../Asset/CSS/Admin Panel/images/notification.png" alt="" class="notification">
             <div class="profile">
-                <img src="../../CSS/Admin Panel/images/tuhin.jpg" class="userImage" alt="">
+                <img src="../../Asset/CSS/Admin Panel/images/tuhin.jpg" class="userImage" alt="">
                 <div class="nameDes">
                     <h1 class="name"><?=$_SESSION['username']?></h1>
                     <h1 class="designation">Designation</h1>
                 </div>
-                <img id="profileDetails" src="../../CSS/Admin Panel/images/downarrow2.png" alt="">
+                <img id="profileDetails" src="../../Asset/CSS/Admin Panel/images/downarrow2.png" alt="">
             </div>
         </div>
     </header>
     <div class="adminDetails"id="adminDetails">
         <div class="imgandname">
-            <img src="../../CSS/Admin Panel/images/tuhin.jpg" class="UimgEx">
+            <img src="../../Asset/CSS/Admin Panel/images/tuhin.jpg" class="UimgEx">
             <h1 class="nameEx"><?=$_SESSION['username']?></h1>
         </div>
         <ul class="poptions">
             <li class="profileOptions">
-                <img src="../../CSS/Admin Panel/images/info.png" class="profileOptionImg" alt="">
+                <img src="../../Asset/CSS/Admin Panel/images/info.png" class="profileOptionImg" alt="">
                 <a class="profileOptions2" href="#">Profile Information</a>
             </li>
             <li class="profileOptions">
-                <img src="../../CSS/Admin Panel/images/support.png" class="profileOptionImg" alt="">
+                <img src="../../Asset/CSS/Admin Panel/images/support.png" class="profileOptionImg" alt="">
                 <a class="profileOptions2" href="#">Support and Help</a>
             </li>
             <hr class="line">
             <li class="profileOptions">
-                <img src="../../CSS/Admin Panel/images/account.png" class="profileOptionImg" alt="">
+                <img src="../../Asset/CSS/Admin Panel/images/account.png" class="profileOptionImg" alt="">
                 <a class="profileOptions2" href="#">Deactive/Close Account</a>
             </li>
             <li class="profileOptions">
-                <img src="../../CSS/Admin Panel/images/logout.png" class="profileOptionImg" alt="">
+                <img src="../../Asset/CSS/Admin Panel/images/logout.png" class="profileOptionImg" alt="">
                 <a class="profileOptions2" href="../../Controller/LogoutCheck.php">Logout</a>
             </li>
         </ul>
     </div>
     <nav class="sideNav">
-        <img class="mainLogo" src="../../CSS/Admin Panel/images/Main_Logo.png" alt="">
+        <img class="mainLogo" src="../../Asset/CSS/Admin Panel/images/Main_Logo.png" alt="">
         <ul class="menu">
             <li class="menuRow" id="Dashboard">
-                <img class="menuIcon"src="../../CSS/Admin Panel/images/home.png" alt="home">
+                <img class="menuIcon"src="../../Asset/CSS/Admin Panel/images/home.png" alt="home">
                 <a class="subMenu" href="#">Dashboard</a>
             </li>
             <li class="menuRow" >
-                <img class="menuIcon"src="../../CSS/Admin Panel/images/allUser.png" alt="home">
+                <img class="menuIcon"src="../../Asset/CSS/Admin Panel/images/allUser.png" alt="home">
                 <a class="subMenu" href="#" >All User</a>
-                <img class="menuIcon" id="all-Pending" src="../../CSS/Admin Panel/images/downarrow.png" alt="">
+                <img class="menuIcon" id="all-Pending" src="../../Asset/CSS/Admin Panel/images/downarrow.png" alt="">
             </li>
             <li class="menuRow" id="pendingUser">
-                <img class="menuIcon"src="../../CSS/Admin Panel/images/pendingUser.png" alt="home">
+                <img class="menuIcon"src="../../Asset/CSS/Admin Panel/images/pendingUser.png" alt="home">
                 <a class="subMenu" href="#">Pending User</a>
             </li>
             <li class="menuRow" id="addUser">
-                <img class="menuIcon"src="../../CSS/Admin Panel/images/addUser.png" alt="home">
+                <img class="menuIcon"src="../../Asset/CSS/Admin Panel/images/addUser.png" alt="home">
                 <a class="subMenu" href="#">Add User</a>
             </li>
             <li class="menuRow">
-                <img class="menuIcon"src="../../CSS/Admin Panel/images/allTransaction.png" alt="home">
+                <img class="menuIcon"src="../../Asset/CSS/Admin Panel/images/allTransaction.png" alt="home">
                 <a class="subMenu" href="#">All Transactions</a>
             </li>
             <li class="menuRow">
-                <img class="menuIcon"src="../../CSS/Admin Panel/images/report.png" alt="home">
+                <img class="menuIcon"src="../../Asset/CSS/Admin Panel/images/report.png" alt="home">
                 <a class="subMenu" href="#">Reports</a>
             </li>
             <li class="menuRow" id="setting">
-                <img class="menuIcon"src="../../CSS/Admin Panel/images/settings.png" alt="home">
+                <img class="menuIcon"src="../../Asset/CSS/Admin Panel/images/settings.png" alt="home">
                 <a class="subMenu" href="#">Settings</a>
             </li>
         </ul>
     </nav>
     <div class="settingPanel" id="settingPanel">
         <div class="adminAccountSetting">
-            <img src="../../CSS/Admin Panel/images/adminSetting.png" alt="Settings Icon" class="settingIcon">
+            <img src="../../Asset/CSS/Admin Panel/images/adminSetting.png" alt="Settings Icon" class="settingIcon">
             <h1 class="headline">Admin Account Setting</h1>
             <ul class="options">
                 <li class="optionsList">Change Admin Password</li>
@@ -102,7 +102,7 @@ if($_SESSION['status']){
             </ul>
         </div>
         <div class="adminAppearence">
-            <img src="../../CSS/Admin Panel/images/ui.png" alt="Settings Icon" class="settingIcon">
+            <img src="../../Asset/CSS/Admin Panel/images/ui.png" alt="Settings Icon" class="settingIcon">
             <h1 class="headline">Appearence Setting</h1>
             <ul class="options">
                 <li class="optionsList">Change Brand Logo</li>
@@ -111,7 +111,7 @@ if($_SESSION['status']){
             </ul>
         </div>
         <div class="systemConfiguration">
-            <img src="../../CSS/Admin Panel/images/system.png" alt="Settings Icon" class="settingIcon">
+            <img src="../../Asset/CSS/Admin Panel/images/system.png" alt="Settings Icon" class="settingIcon">
             <h1 class="headline">System Configuration</h1>
             <ul class="options">
                 <li class="optionsList">Enable Maintainence Mode</li>
@@ -142,27 +142,27 @@ if($_SESSION['status']){
             <h1>User Insights</h1>
             <ul class="ULuserInsight">
                 <li class="ULset">
-                    <img class="ULicon" src="../../CSS/Admin Panel/images/user.png">
+                    <img class="ULicon" src="../../Asset/CSS/Admin Panel/images/user.png">
                     <a class="ULa" href="#">Top User</a>
-                    <img class="ULarrow" src="../../CSS/Admin Panel/images/forward.png" alt="">
+                    <img class="ULarrow" src="../../Asset/CSS/Admin Panel/images/forward.png" alt="">
                 </li>
                 <hr class="ULline">
                 <li class="ULset">
-                    <img class="ULicon" src="../../CSS/Admin Panel/images/activeUser.png">
+                    <img class="ULicon" src="../../Asset/CSS/Admin Panel/images/activeUser.png">
                     <a class="ULa" href="#">Most Active User</a>
-                    <img class="ULarrow" src="../../CSS/Admin Panel/images/forward.png" alt="">
+                    <img class="ULarrow" src="../../Asset/CSS/Admin Panel/images/forward.png" alt="">
                 </li>
                 <hr class="ULline">
                 <li class="ULset">
-                    <img class="ULicon" src="../../CSS/Admin Panel/images/newUser.png">
+                    <img class="ULicon" src="../../Asset/CSS/Admin Panel/images/newUser.png">
                     <a class="ULa" href="#">Newly Registered Users (Last 7 Days)</a>
-                    <img class="ULarrow" src="../../CSS/Admin Panel/images/forward.png" alt="">
+                    <img class="ULarrow" src="../../Asset/CSS/Admin Panel/images/forward.png" alt="">
                 </li>
                 <hr class="ULline">
                 <li class="ULset">
-                    <img class="ULicon" src="../../CSS/Admin Panel/images/alert.png">
+                    <img class="ULicon" src="../../Asset/CSS/Admin Panel/images/alert.png">
                     <a class="ULa" href="#">Suspicious or Unusual Activily Alerts</a>
-                    <img class="ULarrow" src="../../CSS/Admin Panel/images/forward.png" alt="">
+                    <img class="ULarrow" src="../../Asset/CSS/Admin Panel/images/forward.png" alt="">
                 </li>
             </ul>
     </div>
@@ -170,39 +170,39 @@ if($_SESSION['status']){
     <h1>Notification</h1>
     <ul class="ULnotification">
         <li class="ULset">
-            <img class="ULicon" src="../../CSS/Admin Panel/images/bug.png">
+            <img class="ULicon" src="../../Asset/CSS/Admin Panel/images/bug.png">
             <a class="ULa" href="#">Feedback or Bug Reports</a>
-            <img class="ULarrow" src="../../CSS/Admin Panel/images/forward.png" alt="">
+            <img class="ULarrow" src="../../Asset/CSS/Admin Panel/images/forward.png" alt="">
         </li>
         <hr class="ULline">
         <li class="ULset">
-            <img class="ULicon" src="../../CSS/Admin Panel/images/support2.png">
+            <img class="ULicon" src="../../Asset/CSS/Admin Panel/images/support2.png">
             <a class="ULa" href="#">Support Messages</a>
-            <img class="ULarrow" src="../../CSS/Admin Panel/images/forward.png" alt="">
+            <img class="ULarrow" src="../../Asset/CSS/Admin Panel/images/forward.png" alt="">
         </li>
         <hr class="ULline">
         <li class="ULset">
-            <img class="ULicon" src="../../CSS/Admin Panel/images/system.png">
+            <img class="ULicon" src="../../Asset/CSS/Admin Panel/images/system.png">
             <a class="ULa" href="#">System Message</a>
-            <img class="ULarrow" src="../../CSS/Admin Panel/images/forward.png" alt="">
+            <img class="ULarrow" src="../../Asset/CSS/Admin Panel/images/forward.png" alt="">
         </li>
         <hr class="ULline">
         <li class="ULset">
-            <img class="ULicon" src="../../CSS/Admin Panel/images/emailsetting.png">
+            <img class="ULicon" src="../../Asset/CSS/Admin Panel/images/emailsetting.png">
             <a class="ULa" href="#">Email Setting</a>
-            <img class="ULarrow" src="../../CSS/Admin Panel/images/forward.png" alt="">
+            <img class="ULarrow" src="../../Asset/CSS/Admin Panel/images/forward.png" alt="">
         </li>
         <hr class="ULline">
         <li class="ULset">
-            <img class="ULicon" src="../../CSS/Admin Panel/images/notificationCenter.png">
+            <img class="ULicon" src="../../Asset/CSS/Admin Panel/images/notificationCenter.png">
             <a class="ULa" href="#">Notification Center</a>
-            <img class="ULarrow" src="../../CSS/Admin Panel/images/forward.png" alt="">
+            <img class="ULarrow" src="../../Asset/CSS/Admin Panel/images/forward.png" alt="">
         </li>
         <hr class="ULline">
         <li class="ULset">
-            <img class="ULicon" src="../../CSS/Admin Panel/images/notificationSetting.png">
+            <img class="ULicon" src="../../Asset/CSS/Admin Panel/images/notificationSetting.png">
             <a class="ULa" href="#">Notification Setting</a>
-            <img class="ULarrow" src="../../CSS/Admin Panel/images/forward.png" alt="">
+            <img class="ULarrow" src="../../Asset/CSS/Admin Panel/images/forward.png" alt="">
         </li>
     </ul>
 </div>
@@ -210,38 +210,38 @@ if($_SESSION['status']){
             <h1>System Monitoring and Maintenance</h1>
             <ul class="ULsystemMonitor">
                 <li class="ULset">
-                    <img class="ULicon" src="../../CSS/Admin Panel/images/server.png">
+                    <img class="ULicon" src="../../Asset/CSS/Admin Panel/images/server.png">
                     <a class="ULa" href="#">Server Health</a>
-                    <img class="ULarrow" src="../../CSS/Admin Panel/images/forward.png" alt="">
+                    <img class="ULarrow" src="../../Asset/CSS/Admin Panel/images/forward.png" alt="">
                 </li>
                 <hr class="ULline">
                 <li class="ULset">
-                    <img class="ULicon" src="../../CSS/Admin Panel/images/backup.png">
+                    <img class="ULicon" src="../../Asset/CSS/Admin Panel/images/backup.png">
                     <a class="ULa" href="#">Backup Status</a>
-                    <img class="ULarrow" src="../../CSS/Admin Panel/images/forward.png" alt="">
+                    <img class="ULarrow" src="../../Asset/CSS/Admin Panel/images/forward.png" alt="">
                 </li>
                 <hr class="ULline">
                 <li class="ULset">
-                    <img class="ULicon" src="../../CSS/Admin Panel/images/update.png">
+                    <img class="ULicon" src="../../Asset/CSS/Admin Panel/images/update.png">
                     <a class="ULa" href="#">Version Control/ Last Update</a>
-                    <img class="ULarrow" src="../../CSS/Admin Panel/images/forward.png" alt="">
+                    <img class="ULarrow" src="../../Asset/CSS/Admin Panel/images/forward.png" alt="">
                 </li>
                 <hr class="ULline">
                 <li class="ULset">
-                    <img class="ULicon" src="../../CSS/Admin Panel/images/security.png">
+                    <img class="ULicon" src="../../Asset/CSS/Admin Panel/images/security.png">
                     <a class="ULa" href="#">Security Monitoring</a>
-                    <img class="ULarrow" src="../../CSS/Admin Panel/images/forward.png" alt="">
+                    <img class="ULarrow" src="../../Asset/CSS/Admin Panel/images/forward.png" alt="">
                 </li>
                 <hr class="ULline">
                 <li class="ULset">
-                    <img class="ULicon" src="../../CSS/Admin Panel/images/performance.png">
+                    <img class="ULicon" src="../../Asset/CSS/Admin Panel/images/performance.png">
                     <a class="ULa" href="#">Performance Metrics</a>
-                    <img class="ULarrow" src="../../CSS/Admin Panel/images/forward.png" alt="">
+                    <img class="ULarrow" src="../../Asset/CSS/Admin Panel/images/forward.png" alt="">
                 </li>
             </ul>
         </div>
     </div>
-    <script src="../../JS/Admin Panel/AdminPanel.js"></script>
+    <script src="../../Asset/JS/Admin Panel/AdminPanel.js"></script>
 </body>
 </html>
 <?php

@@ -12,8 +12,8 @@ if (isset($_SESSION['status'])) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>View Profile</title>
-    <link rel="stylesheet" href="../../CSS/Profile Management/View profile.css" />
-    <script src="../../JS/Profile Management/View profile.js" defer></script>
+    <link rel="stylesheet" href="../../Asset/CSS/Profile Management/View profile.css" />
+    <script src="../../Asset/JS/Profile Management/View profile.js" defer></script>
   </head>
 
   <body>

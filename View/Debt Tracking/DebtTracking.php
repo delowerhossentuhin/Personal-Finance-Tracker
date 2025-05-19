@@ -9,20 +9,20 @@ if($_SESSION['status']){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Debt Tracking</title>
-    <link rel="stylesheet" href="../../CSS/Debt Tracking/DebtTracking.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0../../CSS/all.min.css"/>
+    <link rel="stylesheet" href="../../Asset/CSS/Debt Tracking/DebtTracking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0../../Asset/CSS/all.min.css"/>
 </head>
 <body>
     <header class="Header">
-        <img src="../../CSS/Dashboard/images/Main_Logo.png" alt="" class="logo">
+        <img src="../../Asset/CSS/Dashboard/images/Main_Logo.png" alt="" class="logo">
         <ul>
             <li class="user-info">
                 <p class="username">User Name</p>
                 <p class="designation">Designation</p>
             </li>
         </ul>
-        <img class="Uimg" src="../../CSS/Dashboard/images/tuhin.jpg" alt="User Image"/>
-        <img class="Unotify" src="../../CSS/Dashboard/images/notifications.png" alt="Notification Sign"/>
+        <img class="Uimg" src="../../Asset/CSS/Dashboard/images/tuhin.jpg" alt="User Image"/>
+        <img class="Unotify" src="../../Asset/CSS/Dashboard/images/notifications.png" alt="Notification Sign"/>
         <div class="search-bar">
         <input type="text" placeholder="Search for..." />
         <i class="fa fa-search"></i>
@@ -76,7 +76,7 @@ if($_SESSION['status']){
             <h1 class="intTitle">Interest Analyzer</h1>
         </div>
     </div>
-    <script src="/JS/Debt Tracking/DebtTracking.js"></script>
+    <script src="../../Asset/JS/Debt Tracking/DebtTracking.js"></script>
 </body>
 </html>
 <?php 

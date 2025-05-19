@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ($_SESSION['status']) {
-  
+
   ?>
   <!DOCTYPE html>
   <html lang="en">
@@ -10,23 +10,23 @@ if ($_SESSION['status']) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Finance Tracker - Dashboard</title>
-    <link rel="stylesheet" href="../../CSS/Dashboard/Dashboard.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="../../Asset/CSS/Dashboard/Dashboard.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/Asset/CSS/all.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
 
   <body>
     <header class="Header">
-      <img class="LogoImg" src="../../CSS/Dashboard/images/Main_Logo.png" alt="Logo" />
-      <img src="../../CSS/Dashboard/images/menu.png" alt="" class="menuI" id="showMenu">
+      <img class="LogoImg" src="../../Asset/CSS/Dashboard/images/Main_Logo.png" alt="Logo" />
+      <img src="../../Asset/CSS/Dashboard/images/menu.png" alt="" class="menuI" id="showMenu">
       <ul>
         <li class="user-info">
           <p class="username"><?= $_SESSION['username'] ?></p>
           <p class="designation">Designation</p>
         </li>
       </ul>
-      <img class="Uimg" src="../../CSS/Dashboard/images/tuhin.jpg" alt="User Image" />
-      <img class="Unotify" src="../../CSS/Dashboard/images/notifications.png" alt="Notification Sign" />
+      <img class="Uimg" src="../../Asset/CSS/Dashboard/images/tuhin.jpg" alt="User Image" />
+      <img class="Unotify" src="../../Asset/CSS/Dashboard/images/notifications.png" alt="Notification Sign" />
       <div class="search-bar">
         <input type="text" placeholder="Search for..." />
         <i class="fa fa-search"></i>
@@ -36,38 +36,38 @@ if ($_SESSION['status']) {
     <nav class="SideNav" id="SideNav">
       <ul class="Menu">
         <li class="menuRow" id="overview">
-          <img class="menuIcon" src="../../CSS/Dashboard/images/overview.png" />
+          <img class="menuIcon" src="../../Asset/CSS/Dashboard/images/overview.png" />
           <a class="subMenu" href="#">Overview</a>
         </li>
         <li class="menuRow" id="card">
-          <img class="menuIcon" src="../../CSS/Dashboard/images/card.png" />
+          <img class="menuIcon" src="../../Asset/CSS/Dashboard/images/card.png" />
           <a class="subMenu" href="#">Card</a>
         </li>
         <li class="menuRow">
-          <img class="menuIcon" src="../../CSS/Dashboard/images/Budget.png" />
+          <img class="menuIcon" src="../../Asset/CSS/Dashboard/images/Budget.png" />
           <a class="subMenu" href="../../View/Budget Goals/BudgetGoals.php">Budget Goal</a>
         </li>
         <li class="menuRow">
-          <img class="menuIcon" src="../../CSS/Dashboard/images/debt.png" />
+          <img class="menuIcon" src="../../Asset/CSS/Dashboard/images/debt.png" />
           <a class="subMenu" href="../../View/Debt Tracking/DebtTracking.php">Debt and Payment</a>
         </li>
         <li class="menuRow">
-          <img class="menuIcon" src="../../CSS/Dashboard/images/statistics.png" />
+          <img class="menuIcon" src="../../Asset/CSS/Dashboard/images/statistics.png" />
           <a class="subMenu" href="#">Statistics</a>
         </li>
         <li class="menuRow">
-          <img class="menuIcon" src="../../CSS/Dashboard/images/report.png" />
+          <img class="menuIcon" src="../../Asset/CSS/Dashboard/images/report.png" />
           <a class="subMenu" href="#">Report</a>
         </li>
         <li class="menuRow">
-          <img class="menuIcon" src="../../CSS/Dashboard/images/account.png" />
+          <img class="menuIcon" src="../../Asset/CSS/Dashboard/images/account.png" />
           <a class="subMenu" href="../../Controller/ProfileCheck.php">Account</a>
         </li>
       </ul>
 
       <div class="logout">
         <div class="menuRow">
-          <img class="menuIcon" src="../../CSS/Dashboard/images/logout.png" />
+          <img class="menuIcon" src="../../Asset/CSS/Dashboard/images/logout.png" />
           <a class="subMenu" href="../../Controller/LogoutCheck.php">Log Out</a>
         </div>
       </div>
@@ -180,7 +180,7 @@ if ($_SESSION['status']) {
         </table>
       </div>
     </div>
-    <script src="../../JS/Dashboard/Dashboard.js"></script>
+    <script src="../../Asset/JS/Dashboard/Dashboard.js"></script>
   </body>
 
   </html>
