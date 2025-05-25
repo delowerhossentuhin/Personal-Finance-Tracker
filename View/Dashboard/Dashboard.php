@@ -11,7 +11,7 @@ if ($_SESSION['status']) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Finance Tracker - Dashboard</title>
     <link rel="stylesheet" href="../../Asset/CSS/Dashboard/Dashboard.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/Asset/CSS/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
 
@@ -81,12 +81,16 @@ if ($_SESSION['status']) {
       <div class="savings">
         <h1>Savings</h1>
         <h2 id="savings">$12,345</h2>
-        <canvas id="panel1_barChart_savings" width="190" height="140"></canvas>
+        <canvas id="panel1_lineChart_savings" width="190" height="140" 
+          style="margin-top: -145px; margin-left: 70px; padding-left: 10px;">
+        </canvas>
       </div>
       <div class="Income">
         <h1>Income</h1>
         <h2 id="income">$25,980</h2>
-        <canvas id="panel1_lineChart_income" width="200" height="140"></canvas>
+        <canvas id="panel1_barChart_income" width="200" height="140" 
+          style="margin-top: -140px; margin-left: 70px;">
+        </canvas>
       </div>
       <div class="Expense">
         <h1>Expense</h1>
