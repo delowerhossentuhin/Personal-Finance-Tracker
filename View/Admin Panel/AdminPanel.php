@@ -1,6 +1,8 @@
 <?php
+
 session_start();
 if($_SESSION['status']){
+    $user = $_SESSION['user_data'];
 ?>
 
 <!DOCTYPE html>
@@ -24,8 +26,8 @@ if($_SESSION['status']){
             <div class="profile">
                 <img src="../../Asset/CSS/Admin Panel/images/tuhin.jpg" class="userImage" alt="">
                 <div class="nameDes">
-                    <h1 class="name"><?=$_SESSION['username']?></h1>
-                    <h1 class="designation">Designation</h1>
+                    <h1 class="name"><?php echo htmlspecialchars($user['username']); ?></h1>
+                    <h1 class="designation"><?php echo htmlspecialchars($user['Designation']); ?></h1>
                 </div>
                 <img id="profileDetails" src="../../Asset/CSS/Admin Panel/images/downarrow2.png" alt="">
             </div>

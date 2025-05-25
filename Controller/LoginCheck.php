@@ -14,13 +14,12 @@ if (isset($_POST['submit'])) {
         // echo json_encode(array('status'=> 'success'));
         $_SESSION['status'] = true;
         $_SESSION['username'] = $username;
+        
+
+    $user_data = getUserByUsername();
+    $_SESSION['user_data'] = $user_data;
+    $type=$user_data['UserType'];
         setcookie('status', 'true', time() + 3000, '/');
-        $con=getConnection();
-        $sql = "SELECT UserType FROM user WHERE username='$username'";
-        $result= mysqli_query($con, $sql);
-        $row=mysqli_fetch_assoc($result);
-        $type=$row['UserType'];
-        $_SESSION['UserType']=$type;
         if($type=='user'){
             header('location:../View/Dashboard/Dashboard.php');
         }

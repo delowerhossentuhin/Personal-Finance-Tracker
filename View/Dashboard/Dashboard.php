@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ($_SESSION['status']) {
-
+   $user = $_SESSION['user_data'];
   ?>
   <!DOCTYPE html>
   <html lang="en">
@@ -22,7 +22,7 @@ if ($_SESSION['status']) {
       <ul>
         <li class="user-info">
           <p class="username"><?= $_SESSION['username'] ?></p>
-          <p class="designation">Designation</p>
+          <p class="designation"><?php echo htmlspecialchars($user['Designation']); ?></p>
         </li>
       </ul>
       <img class="Uimg" src="../../Asset/CSS/Dashboard/images/tuhin.jpg" alt="User Image" />
@@ -45,7 +45,7 @@ if ($_SESSION['status']) {
         </li>
         <li class="menuRow">
           <img class="menuIcon" src="../../Asset/CSS/Dashboard/images/Budget.png" />
-          <a class="subMenu" href="../../View/Budget Goals/BudgetGoals.php">Budget Goal</a>
+          <a class="subMenu" href="../../View/Budget_Goals/BudgetGoals.php">Budget Goal</a>
         </li>
         <li class="menuRow">
           <img class="menuIcon" src="../../Asset/CSS/Dashboard/images/debt.png" />
