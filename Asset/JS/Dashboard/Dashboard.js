@@ -233,10 +233,10 @@ document.getElementById('overview').addEventListener('click', function() {
     document.getElementById('panel2').style.display = 'none';
 });
 
-document.getElementById('card').addEventListener('click', function() {
-    document.getElementById('panel1').style.display = 'none';
-    document.getElementById('panel2').style.display = 'block';
-});
+// document.getElementById('data').addEventListener('click', function() {
+//     document.getElementById('panel1').style.display = 'none';
+//     document.getElementById('panel2').style.display = 'block';
+// });
 let cardCount = 2;
 
 document.addEventListener("DOMContentLoaded", () => {

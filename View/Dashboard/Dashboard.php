@@ -39,9 +39,9 @@ if ($_SESSION['status']) {
           <img class="menuIcon" src="../../Asset/CSS/Dashboard/images/overview.png" />
           <a class="subMenu" href="#">Overview</a>
         </li>
-        <li class="menuRow" id="card">
-          <img class="menuIcon" src="../../Asset/CSS/Dashboard/images/card.png" />
-          <a class="subMenu" href="#">Card</a>
+        <li class="menuRow" id="data">
+          <img class="menuIcon" src="../../Asset/CSS/Dashboard/images/data.png" />
+          <a class="subMenu" href="../../View/Dashboard/YourData.php">Your Data</a>
         </li>
         <li class="menuRow">
           <img class="menuIcon" src="../../Asset/CSS/Dashboard/images/Budget.png" />
