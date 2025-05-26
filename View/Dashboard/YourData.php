@@ -8,7 +8,7 @@ if($_SESSION['status']){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget Goals</title>
+    <title>Your Data</title>
     <link rel="stylesheet" href="../../Asset/CSS/Dashboard/YourData.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
@@ -349,8 +349,15 @@ if($_SESSION['status']){
                 </div>
             </div>
         </div>
-       
+        <div class="upFile">
+            <form id="uploadForm" action="../../Model/file_handle.php" method="post" enctype="multipart/form-data" style="background-color: white; color: black; border: 1px solid black; padding: 20px; width: 300px; font-family: Arial, sans-serif; border-radius: 8px; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);">
+                <label for="file" style="display: block; margin-bottom: 8px; font-weight: bold;">Upload your document:</label>
+                <input type="file" name="file" id="file" required style="margin-bottom: 15px; width: 100%;">
+                <button type="submit" name="submit" style="background-color: black; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">Upload</button>
+            </form>
+        </div>
     </div>
+    
     <script src="../../Asset/JS/Dashboard/YourData.js"></script>
 </body>
 </html>

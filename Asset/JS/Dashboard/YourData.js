@@ -7,6 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
    addPanel2=document.getElementById("addPanel2");
    addPanel3=document.getElementById("addPanel3")
 
+   document.getElementById('uploadForm').addEventListener('submit', function (e) {
+        const fileInput = document.getElementById('file');
+        if (!fileInput.value) {
+            alert('Please select a file before uploading.');
+            e.preventDefault();
+        } else {
+            alert('File uploaded successfully!');
+        }
+    });
+
    addItem1.addEventListener('click',()=>{
     if(addPanel1.style.display=='none'){
         addPanel1.style.display="block"
