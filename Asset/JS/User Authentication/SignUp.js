@@ -37,7 +37,7 @@ signup.addEventListener("click", function () {
     const selectedGender = getSelectedGender();
 
     // Validation checks
-    if (!isFilled(first_name, last_name, phone, email, date, password,username)) {
+    if (!isFilled(first_name, last_name, phone, email, date, password, username)) {
         // error.innerText = "All input fields must be filled.";
         alert("All input fields must be filled.");
     } else if (
@@ -51,11 +51,9 @@ signup.addEventListener("click", function () {
         // error.innerText = "Please select a gender.";
         alert("Please select a gender.");
     } else {
-        // Form is valid — you can proceed (e.g., submit or show success)
-        // error.innerText = "Form submitted successfully!";
+        
         alert("Form submitted successfully!")
-        // error.style.color = "blue";
-        // window.location.href='../../View/User Authentication/LogIn.html';
+
 
     }
 
