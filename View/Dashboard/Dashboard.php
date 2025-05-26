@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ($_SESSION['status']) {
-   $user = $_SESSION['user_data'];
+  $user = $_SESSION['user_data'];
   ?>
   <!DOCTYPE html>
   <html lang="en">
@@ -53,7 +53,7 @@ if ($_SESSION['status']) {
         </li>
         <li class="menuRow">
           <img class="menuIcon" src="../../Asset/CSS/Dashboard/images/statistics.png" />
-          <a class="subMenu" href="#">Statistics</a>
+          <a class="subMenu" href="../Income_Recording/Income_Recording.php">Income Recording</a>
         </li>
         <li class="menuRow">
           <img class="menuIcon" src="../../Asset/CSS/Dashboard/images/report.png" />
@@ -81,15 +81,14 @@ if ($_SESSION['status']) {
       <div class="savings">
         <h1>Savings</h1>
         <h2 id="savings">$12,345</h2>
-        <canvas id="panel1_lineChart_savings" width="190" height="140" 
+        <canvas id="panel1_lineChart_savings" width="190" height="140"
           style="margin-top: -145px; margin-left: 70px; padding-left: 10px;">
         </canvas>
       </div>
       <div class="Income">
         <h1>Income</h1>
         <h2 id="income">$25,980</h2>
-        <canvas id="panel1_barChart_income" width="200" height="140" 
-          style="margin-top: -140px; margin-left: 70px;">
+        <canvas id="panel1_barChart_income" width="200" height="140" style="margin-top: -140px; margin-left: 70px;">
         </canvas>
       </div>
       <div class="Expense">

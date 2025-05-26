@@ -35,6 +35,11 @@ function deleteUser($id)
 
 }
 
+function getincom($id)
+{
+
+}
+
 function addUser($user)
 {
     $con = getConnection();

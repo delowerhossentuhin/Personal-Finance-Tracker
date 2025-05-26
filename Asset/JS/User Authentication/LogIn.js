@@ -1,16 +1,36 @@
-//input's
 const username = document.getElementById("username");
 const password = document.getElementById("password");
-const footer = document.querySelector("footer");
+const form = document.getElementById("main_form");
 
-//button's
 const login = document.getElementById("login_btn");
 
-function error_msg(msg) {
-    const error = document.createElement("p");
-    error.id = "error_message";
-
-    error.innerText = msg;
-    error.style.color = "red";
-    footer.insertAdjacentElement('beforebegin', error);
+function isValidLength(str, maxLength = 30) {
+    return str.trim().length <= maxLength;
 }
+
+login.addEventListener("click", function (e) {
+
+
+    const uname = username.value.trim();
+    const pwd = password.value.trim();
+
+
+    if (uname === "" || pwd === "") {
+        alert("Please Fill Username and Password");
+        isValid = false;
+    }
+
+
+    if (!isValidLength(uname) || !isValidLength(pwd)) {
+        alert("Username and Password must be less than 30 characters");
+        isValid = false;
+    }
+
+    // // Only submit if all validations pass
+    // if (isValid) {
+
+    //     form.submit();
+
+    // }
+
+});
