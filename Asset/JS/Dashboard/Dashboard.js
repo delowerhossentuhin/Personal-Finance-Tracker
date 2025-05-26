@@ -182,6 +182,16 @@ const barChart_statistics = new Chart(ctx_statistics, {
     }
   }
 });
+
+const totalBalance = response.balance.data.reduce((sum, val) => sum + parseFloat(val), 0);
+document.getElementById('balance').innerHTML=totalBalance;
+const totalSaving = response.saving.data.reduce((sum, val) => sum + parseFloat(val), 0);
+document.getElementById('savings').innerHTML=totalSaving;
+const totalIncome = response.income.data.reduce((sum, val) => sum + parseFloat(val), 0);
+document.getElementById('income').innerHTML=totalIncome;
+const totalExpense = response.expense.data.reduce((sum, val) => sum + parseFloat(val), 0);
+document.getElementById('expense').innerHTML=totalExpense;
+
 });
 ///////////// Event Listener
 document.getElementById('overview').addEventListener('click', function() {

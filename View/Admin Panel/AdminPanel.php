@@ -1,6 +1,6 @@
 <?php
-
 session_start();
+require_once('../../Model/Database_connection.php');
 if($_SESSION['status']){
     $user = $_SESSION['user_data'];
 ?>
@@ -10,7 +10,7 @@ if($_SESSION['status']){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../Asset/CSS/Admin Panel/AdminPanel.css">
+    <link rel="stylesheet" href="../../Asset/CSS/Admin_Panel/AdminPanel.css">
     <title>Admin Panel</title>
 </head>
 <body>
@@ -65,7 +65,7 @@ if($_SESSION['status']){
                 <img class="menuIcon"src="../../Asset/CSS/Admin Panel/images/home.png" alt="home">
                 <a class="subMenu" href="#">Dashboard</a>
             </li>
-            <li class="menuRow" >
+            <li class="menuRow" id="alluser">
                 <img class="menuIcon"src="../../Asset/CSS/Admin Panel/images/allUser.png" alt="home">
                 <a class="subMenu" href="#" >All User</a>
                 <img class="menuIcon" id="all-Pending" src="../../Asset/CSS/Admin Panel/images/downarrow.png" alt="">
@@ -122,22 +122,98 @@ if($_SESSION['status']){
         </div>
     </div>
     <div class="allUserPanel" id="allUserPanel">
-        <h1>Hello </h1>
+        <table class="allTable">
+            <?php
+            $con = getConnection();
+
+            if (isset($_GET['delete_id'])) {
+                $delete_id = intval($_GET['delete_id']);
+                $stmt = $con->prepare("DELETE FROM user WHERE user_id = ?");
+                $stmt->bind_param("i", $delete_id);
+                $stmt->execute();
+                $stmt->close();
+            }
+
+            $sql = "SELECT user_id, first_name, last_name, full_name, phone, email, gender, birth_date, username, UserType, Designation 
+                    FROM user 
+                    WHERE UserType = 'user' 
+                    ORDER BY user_id ASC";
+
+            $result = $con->query($sql);
+
+            echo "<thead><tr>
+                    <th>User ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Full Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Birth Date</th>
+                    <th>Username</th>
+                    <th>User Type</th>
+                    <th>Designation</th>
+                    <th>Delete</th>
+                </tr></thead><tbody>";
+
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . htmlspecialchars($row['user_id']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['first_name']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['last_name']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['full_name']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['phone']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['email']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['gender']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['birth_date']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['username']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['UserType']) . "</td>";
+                echo "<td>" . htmlspecialchars($row['Designation']) . "</td>";
+                echo "<td>
+                        <a href='?delete_id=" . $row['user_id'] . "' 
+                        onclick=\"return confirm('Are you sure you want to delete this user?')\">
+                        Delete
+                        </a>
+                    </td>";
+                echo "</tr>";
+            }
+            echo "</tbody>";
+            ?>
+        </table>
+
+        <?php
+        $con->close();
+        ?>
+
+
     </div>
     <div class="dashboardPanel" id="dashboardPanel">
         <div class="summarydiv">
             <h1 class="scard">Summary Card (Top Metrics)</h1>
             <div class="sdivTotalUser">
                 <h1>Total User</h1>
-                <h2>12,50</h1>
+                <?php
+                    $con = getConnection();
+
+                    $countSql = "SELECT COUNT(*) AS total FROM user";
+                    $countResult = $con->query($countSql);
+                    $rowCount = 0;
+
+                    if ($countResult && $countResult->num_rows > 0) {
+                        $row = $countResult->fetch_assoc();
+                        $rowCount = $row['total'];
+                    }
+                ?>
+
+                <h2><?php echo number_format($rowCount); ?></h2>
             </div>
             <div class="sdivActiveUser">
                 <h1>Active User</h1>
-                <h2>250</h1>
+                <h2>---</h1>
             </div>
             <div class="sdivTotalTransaction">
                 <h1>Total Transaction</h1>
-                <h2>250</h1>
+                <h2>---</h1>
             </div>
         </div>
         <div class="userInsight">
@@ -243,7 +319,7 @@ if($_SESSION['status']){
             </ul>
         </div>
     </div>
-    <script src="../../Asset/JS/Admin Panel/AdminPanel.js"></script>
+    <script src="../../Asset/JS/Admin_Panel/AdminPanel.js"></script>
 </body>
 </html>
 <?php

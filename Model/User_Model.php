@@ -47,7 +47,7 @@ function addUser($user)
     $birth_date = $user['birthdate'];
     $password = $user['password'];
     $username = $user['username'];
-    $sql = "INSERT INTO user (first_name, last_name,full_name, phone, email,gender,birth_date,password,username) VALUES ( '$fname', '$lname', '$full_name', '$phone', '$email','$gender','$birth_date', '$password','$username')";
+    $sql = "INSERT INTO user (first_name, last_name,full_name, phone, email,gender,birth_date,password,username,UserType) VALUES ( '$fname', '$lname', '$full_name', '$phone', '$email','$gender','$birth_date', '$password','$username','user')";
     if (mysqli_query($con, $sql)) {
         return true;
     } else {

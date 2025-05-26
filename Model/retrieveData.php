@@ -7,7 +7,7 @@ $con = getConnection();
 $username = $_SESSION['username'];
 
 // Get user_id
-$sql_user = "SELECT user_id FROM user WHERE username = '$username'";
+$sql_user = "select user_id from user where username = '$username'";
 $result_user = mysqli_query($con, $sql_user);
 $row_user = mysqli_fetch_assoc($result_user);
 $userid = $row_user['user_id'];
@@ -16,7 +16,7 @@ $userid = $row_user['user_id'];
 $month_order = "'January','February','March','April','May','June','July','August','September','October','November','December'";
 
 // Fetch Balance
-$sql_balance = "SELECT month, balance FROM balance WHERE user_id = '$userid' ORDER BY FIELD(month, $month_order)";
+$sql_balance = "select month, balance from balance where user_id = '$userid' order by field(month, $month_order)";
 $result_balance = mysqli_query($con, $sql_balance);
 $balance_labels = $balance_data = [];
 while ($row = mysqli_fetch_assoc($result_balance)) {
@@ -25,7 +25,7 @@ while ($row = mysqli_fetch_assoc($result_balance)) {
 }
 
 // Fetch Saving
-$sql_saving = "SELECT month, amount FROM saving WHERE user_id = '$userid' ORDER BY FIELD(month, $month_order)";
+$sql_saving = "select month, amount from saving where user_id = '$userid' order by field(month, $month_order)";
 $result_saving = mysqli_query($con, $sql_saving);
 $saving_labels = $saving_data = [];
 while ($row = mysqli_fetch_assoc($result_saving)) {
@@ -34,7 +34,7 @@ while ($row = mysqli_fetch_assoc($result_saving)) {
 }
 
 // Fetch Income
-$sql_income = "SELECT month, amount FROM income WHERE user_id = '$userid' ORDER BY FIELD(month, $month_order)";
+$sql_income = "select month, amount from income where user_id = '$userid' order by field(month, $month_order)";
 $result_income = mysqli_query($con, $sql_income);
 $income_labels = $income_data = [];
 while ($row = mysqli_fetch_assoc($result_income)) {
@@ -43,7 +43,7 @@ while ($row = mysqli_fetch_assoc($result_income)) {
 }
 
 // Fetch Expense
-$sql_expense = "SELECT month, amount FROM expense WHERE user_id = '$userid' ORDER BY FIELD(month, $month_order)";
+$sql_expense = "select month, amount from expense where user_id = '$userid' order by field(month, $month_order)";
 $result_expense = mysqli_query($con, $sql_expense);
 $expense_labels = $expense_data = [];
 while ($row = mysqli_fetch_assoc($result_expense)) {

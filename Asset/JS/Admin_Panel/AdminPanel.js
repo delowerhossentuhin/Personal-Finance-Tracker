@@ -1,3 +1,4 @@
+console.log("Hello")
 document.addEventListener("DOMContentLoaded", ()=>{
     allPendingIcon=document.getElementById('all-Pending')
     pendingUser=document.getElementById("pendingUser")
@@ -36,9 +37,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
         }
     }) 
 
-
-
-    //Click Setting btn and open setting panel
     settingBTN.addEventListener('click', () => {
         if (settingPanel.style.display === 'none') {
             settingPanel.style.display = 'block';
@@ -63,14 +61,4 @@ document.addEventListener("DOMContentLoaded", ()=>{
         }
     });
     
-    // notificationContainer = document.getElementById("Notification-Div");
-    // fetch("../../View/Notification/Notification.html")
-    //     .then(response => response.text())
-    //     .then(html => {
-    //     notificationContainer.innerHTML = html;
-    //     })
-    //     .catch(error => {
-    //     console.error("Failed to load panel1:", error);
-    // });
-
 })

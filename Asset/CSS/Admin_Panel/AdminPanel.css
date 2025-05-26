@@ -498,13 +498,45 @@
     background-color: transparent;
 }
 /*All User Panel*/
-.allUserPanel{
-     display: none;
-    position: absolute;
-    top:70px;
+.allUserPanel {
+    display: none;
+    position: fixed;
+    top: 70px;
     left: 180px;
-    width: calc(100% - 180px);
-    height: calc(100%-70px);
-    flex-wrap: wrap;
+    width: calc(100% - 180px); /* set width explicitly */
+    height: calc(100% - 70px); /* set height explicitly */
+    overflow-x: auto;  /* enable horizontal scroll */
+    overflow-y: auto;  /* enable vertical scroll if needed */
+    background-color: white; /* optional */
     z-index: 500;
+    padding: 10px; /* optional padding */
+    box-sizing: border-box; /* include padding in size */
 }
+
+.allTable {
+    border-collapse: collapse;
+    min-width: 900px;  /* Table is at least 900px wide */
+    background-color: white; /* Table background */
+    color: black;             /* Text color */
+    font-family: Arial, sans-serif;
+    margin: 10px;
+}
+
+.allTable th, .allTable td {
+    border: 1px solid black; /* Black borders */
+    padding: 8px;
+    text-align: left;
+    background-color: white; /* White background for all cells, including headers */
+    color: black;            /* Black text for all cells */
+}
+
+.allTable a {
+    color: #d00;             /* Red delete link */
+    text-decoration: none;
+    background-color: white;
+}
+
+.allTable a:hover {
+    text-decoration: underline;
+}
+
