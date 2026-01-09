@@ -9,7 +9,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_type'])) {
     $amount = trim($_POST['amount']);
     $username = $_SESSION['username'];
 
-    // Validate input
     if (empty($month) || empty($year) || !is_numeric($amount)) {
         echo "Invalid input.";
         exit();

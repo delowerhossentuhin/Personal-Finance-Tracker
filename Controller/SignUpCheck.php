@@ -27,14 +27,8 @@ if (isset($_POST['submit'])) {
         $flag = false;
     }
 
-    // Email validation
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Invalid email format.<br>";
-        $flag = false;
-    }
-
     // Phone: numeric, length check
-    if (!is_numeric($phone) || strlen($phone) < 12) {
+    if (!is_numeric($phone) || strlen($phone) == 11) {
         echo "Phone number must be numeric and at least 10 digits.<br>";
         $flag = false;
     }

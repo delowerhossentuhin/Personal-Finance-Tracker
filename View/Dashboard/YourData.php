@@ -29,7 +29,7 @@ if($_SESSION['status']){
         </div>
     </header>
     <div class="bodyclass">
-        <h1 class="titleBody" style="font-size: 24px; background-color:transparent; text-align: center; margin: 20px 0; ">Your All Data</h1>
+        <h1 class="titleBody" style="padding: 15px; font-size: 24px; background-color:transparent; text-align: center; margin: 20px 0; ">Your All Data</h1>
 
         <div class="bodyclass1">
             <div class="balance">

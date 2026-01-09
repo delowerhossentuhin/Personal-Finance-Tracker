@@ -51,7 +51,7 @@ while ($row = mysqli_fetch_assoc($result_expense)) {
     $expense_data[] = (float)$row['amount'];
 }
 
-// Return all as JSON
+// return  as JSON
 echo json_encode([
     'balance' => ['labels' => $balance_labels, 'data' => $balance_data],
     'saving'  => ['labels' => $saving_labels,  'data' => $saving_data],
